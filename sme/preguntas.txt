@@ -1,0 +1,35 @@
+------------------------------------------
+-- 04-11-2013
+------------------------------------------
+-   Sólo usuario "fondoempleo" puede visualizar los datos de Cuenta Bancaria de las IE?
+-   Sólo perfil "SP" puede editar Datos Generales? Perfil Administrador?
+
+------------------------------------------
+-- 05-11-2013
+------------------------------------------
+-   Definición de lista de sectores.
+    En base al archivo "TABLA COMPLETA 2013.xlsx"
+
+------------------------------------------
+-- 14-11-2013
+------------------------------------------
+Las observaciones anteriores.
+Revisión de Cronograma de Productos.
+    Agregar, Editar y Eliminar: Indicadores y Características
+    en el Cronograma de Productos? O sólo programarlos?
+    Cómo definir las fechas de los entregables?
+    La duración se debe considerar de los Datos Generales o de otra aspecto (Duración)?
+        Obtenerlo de datos generales
+
+Lunes 18: FE enviará el acta completada.
+1era: Agregar entregables como columna.
+2da: 
+
+Luego de las pruebas: Boton para mostrar resumen de presupuesto.
+Plan Operativo asociado a Versión: Verificar.
+Plan Operativo: Según lo planificado, en la Ampliación y en la Suspensión.
+Se considera al último PO.
+
+Siguiente reunión: Viernes 22 9am. A confirmar.
+
+Lunes 02 Dic, reunión de seguimiento y capacitación.

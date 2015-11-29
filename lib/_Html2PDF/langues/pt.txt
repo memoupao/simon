@@ -1,0 +1,21 @@
+err01	A tag <b>&lt;[[OTHER]]&gt;</b> ainda n�o existe.<br><br>Se voc� quer inser�-la, deve criar os métodos <b>o_[[OTHER]]</b> (para abr�-la) e <b>c_[[OTHER]]</b> (para fech�-la) seguindo o modelo das tags existentes.<br><br>Se voc� criar novos métodos, os envie para webmaster@html2pdf.fr para que as pr�ximas vers�es de HTML2PDF, e o restante do mundo se beneficie com isso.
+err02	Frase de 1000 linhas => muito grande<br><b>Frase :</b> [[OTHER_0]]<br><b>Tamanho do quadro :</b> [[OTHER_1]]<br><b>Tamanho do texto :</b> [[OTHER_2]]<br>
+err03	Código HTML n�o v�lido, uma tag est� com fechamento sobrando : <b>&lt;[[OTHER]]&gt;</b>
+err04	Código HTML n�o v�lido, as tags n�o est�o fechadas na ordem correta.<br>Estado : <pre>[[OTHER]]</pre>
+err05	Código HTML n�o v�lido, todas as tags devem ser fechadas.<br>Estado : <pre>[[OTHER]]</pre>
+err06	Imposs�vel carregar imagem <b>[[OTHER]]</b>
+err07	O conte�do de uma tag TD n�o se encaixa em apenas uma página
+err08	<b>&lt;[[OTHER]]&gt;</b> tag not in a &lt;DRAW&gt; tag
+err09	The using of the <b>&lt;[[OTHER_0]]&gt;</b>> tag has changed, you can not use [[OTHER_1]] anymore. Read the WIKI
+txt01	ERRO n�
+txt02	Arquivo :
+txt03	Linha :
+pdf01	Documento generado em [[date_d]]/[[date_m]]/[[date_y]]
+pdf02	Documento generado �s [[date_h]]:[[date_i]]
+pdf03	Documento generado em [[date_d]]/[[date_m]]/[[date_y]] �s [[date_h]]:[[date_i]]
+pdf04	Página [[current]]/[[nb]]
+pdf05	Os formul�rios exigem a utiliza��o do Adobe Reader 9
+vue01	CABE�ALHO
+vue02	RODAP�
+vue03	P�GINA
+vue04	Visualiza��o

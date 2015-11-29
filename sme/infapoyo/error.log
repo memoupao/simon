@@ -1,0 +1,1 @@
+<b>[phpBB Debug] PHP Notice</b>: in file <b>/includes/session.php</b> on line <b>1024</b>: <b>Cannot modify header information - headers already sent by (output started at /home/monelao/public_html/FE3/sme/infapoyo/foro.php:4)</b><br />

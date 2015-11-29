@@ -1,0 +1,774 @@
+.:
+total 52
+drwxrwxr-x. 3 admin admin  4096 Mar 21 22:49 ejecutores
+drwxrwxr-x. 2 admin admin  4096 Jan  9 10:23 equipofe
+drwxrwxr-x. 3 admin admin  4096 Jan 18 18:01 infapoyo
+drwxrwxr-x. 2 admin admin  4096 Jan 13 12:43 monitoreo
+drwxrwxr-x. 4 admin admin  4096 Jan  6 18:07 monitoreofe
+drwxrwxr-x. 2 admin admin  4096 Jan  6 18:07 _notes
+-rw-r--r--. 1 root  root      0 May 22 01:08 novale.txt
+drwxrwxr-x. 2 admin admin  4096 Jan  6 18:07 pagoprov
+drwxrwxr-x. 8 admin admin  4096 Jan  6 18:07 proyectos
+drwxrwxr-x. 4 admin admin 12288 Apr  9 19:57 reportes
+drwxrwxr-x. 2 admin admin  4096 Jan  6 18:07 SpryAssets
+-rw-rw-r--. 1 admin admin   264 Jan  6 18:07 utiles.php
+
+./ejecutores:
+total 184
+-rw-r--r--. 1 root  root   6555 Mar 21 22:49 cta_bancaria_edit.php
+-rw-rw-r--. 1 admin admin 12728 Jan  6 18:07 cto_edit.php
+-rw-rw-r--. 1 admin admin 11743 Jan  6 18:07 cto_new_resp.php
+-rw-r--r--. 1 root  root  12606 Mar 21 22:41 ejec_ctas_bco.php
+-rw-rw-r--. 1 admin admin 12044 Jan  6 18:07 ejec_edit_back.php
+-rw-rw-r--. 1 admin admin 22720 Jan  6 18:07 ejec_edit.php
+-rw-rw-r--. 1 admin admin  9238 Jan  6 18:07 ejec_resp_list.php
+-rw-rw-r--. 1 admin admin 11274 Jan  6 18:07 equi_edit.php
+-rw-rw-r--. 1 admin admin 23986 Jan  6 18:07 lista_contacto.php
+-rw-rw-r--. 1 admin admin 17328 Jan  6 18:07 lista.php
+drwxrwxr-x. 2 admin admin  4096 Jan  6 18:07 _notes
+-rw-r--r--. 1 root  root   1473 Mar 21 22:41 process_ctas.php
+-rw-rw-r--. 1 admin admin  2854 Jan  6 18:07 process_cto.php
+-rw-rw-r--. 1 admin admin  1442 Jan  6 18:07 process_cto.xml.php
+-rw-rw-r--. 1 admin admin  2756 Jan  6 18:07 process.php
+-rw-rw-r--. 1 admin admin  2653 Jan  6 18:07 process_res.php
+-rw-rw-r--. 1 admin admin  1919 Jan  6 18:07 process.xml.php
+
+./ejecutores/_notes:
+total 8
+-rw-rw-r--. 1 admin admin 1098 Jan  6 18:07 cto_edit.php.mno
+-rw-rw-r--. 1 admin admin  629 Jan  6 18:07 dwsync.xml
+
+./equipofe:
+total 36
+-rw-rw-r--. 1 admin admin  9868 Jan  6 18:07 equipo_edit.php
+-rw-r--r--. 1 root  root  16252 Jan  9 10:23 lista.php
+-rw-rw-r--. 1 admin admin  1528 Jan  6 18:07 process_equi.php
+-rw-rw-r--. 1 admin admin  1407 Jan  6 18:07 process.xml.php
+
+./infapoyo:
+total 84
+drwxrwxrwx. 2 admin admin  4096 Jan 28 12:14 bv
+-rwxrwxr-x. 1 admin admin  1502 Jan  6 18:07 error_log
+-rwxrwxr-x. 1 admin admin   237 Jan  6 18:07 error.log
+-rwxrwxr-x. 1 admin admin  3031 Jan  6 18:07 foro.php
+-rwxrwxr-x. 1 admin admin  2185 Jan  6 18:07 inf_apoyo_process.php
+-rwxrwxr-x. 1 admin admin 11306 Jan  6 18:07 inf_apoyo_process.php.zip
+-rwxrwxr-x. 1 admin admin 16397 Jan  6 18:07 inf_biblio_list.php
+-rwxrwxr-x. 1 admin admin 12642 Jan  6 18:07 inf_enlaces_list.php
+-rwxrwxr-x. 1 admin admin  1983 Jan  6 18:07 inf_enlaces_process.php
+-rwxr-xr-x. 1 root  root   1816 Jan 18 18:01 inf_soporte_process.php
+-rwxrwxr-x. 1 admin admin  5570 Jan  6 18:07 soporte.php
+
+./infapoyo/bv:
+total 0
+
+./monitoreo:
+total 132
+-rw-rw-r--. 1 admin admin  8587 Jan  6 18:07 cron_visita_mi_edit.php
+-rw-rw-r--. 1 admin admin 15468 Jan  6 18:07 cron_visita_mi.php
+-rw-rw-r--. 1 admin admin  1599 Jan  6 18:07 cron_visita_mi_process.php
+-rw-rw-r--. 1 admin admin 10354 Jan  6 18:07 plan_visita_act_edit_list.php
+-rw-rw-r--. 1 admin admin  6945 Jan  6 18:07 plan_visita_act_edit.php
+-rw-rw-r--. 1 admin admin 21430 Jan  6 18:07 plan_visita_act_list.php
+-rw-rw-r--. 1 admin admin  2818 Jan  6 18:07 plan_visita_act_process.php
+-rw-rw-r--. 1 admin admin  1390 Jan  6 18:07 plan_visita_act_process.xml.php
+-rw-rw-r--. 1 admin admin 11571 Jan  6 18:07 plan_visita_me_edit2.php
+-rw-rw-r--. 1 admin admin 10670 Jan  6 18:07 plan_visita_me_edit.php
+-rw-r--r--. 1 root  root  17849 Jan 13 12:43 plan_visita_me.php
+-rw-rw-r--. 1 admin admin  1601 Jan  6 18:07 plan_visita_me_process.php
+
+./monitoreofe:
+total 32
+drwxrwxr-x. 2 admin admin  4096 Jan 21 23:37 adm
+drwxrwxr-x. 4 admin admin  4096 Apr  9 19:57 informes
+-rw-rw-r--. 1 admin admin 22286 Jan  6 18:07 vb_inf_trim_mtec.php
+
+./monitoreofe/adm:
+total 320
+-rw-r--r--. 1 root  root  25245 Jan 10 16:51 aprob_desemb_edit.php
+-rw-r--r--. 1 root  root  12146 Jan 10 16:51 aprob_desemb_lista.php
+-rw-r--r--. 1 root  root   9509 Jan 10 08:53 aprob_desemb.php
+-rw-r--r--. 1 root  root    906 Jan 10 16:51 aprob_desemb_process.php
+-rw-r--r--. 1 root  root   8656 Jan 11 11:47 auto_giro_chk_edit2.php
+-rw-r--r--. 1 root  root  14082 Jan 11 11:47 auto_giro_chk_edit.php
+-rw-r--r--. 1 root  root   9353 Jan 11 11:47 auto_giro_chk_me_lista.php
+-rw-r--r--. 1 root  root   9176 Jan 11 11:47 auto_giro_chk_me.php
+-rw-rw-r--. 1 admin admin  1568 Jan  6 18:07 auto_giro_chk_process.php
+-rw-r--r--. 1 root  root  14278 Jan 10 17:05 ctrl_pag_me_edit.php
+-rw-r--r--. 1 root  root   9228 Jan 10 17:05 ctrl_pag_me_lista.php
+-rw-r--r--. 1 root  root   8742 Jan 10 17:05 ctrl_pag_me.php
+-rw-r--r--. 1 root  root    909 Jan 10 17:05 ctrl_pago_me_process.php
+-rw-rw-r--. 1 admin admin  9210 Jan  6 18:07 ejec_desemb_edit2.php
+-rw-rw-r--. 1 admin admin 14580 Jan  6 18:07 ejec_desemb_edit.php
+-rw-r--r--. 1 root  root   7693 Jan 18 13:19 ejec_desemb_entregable_edit.php
+-rw-r--r--. 1 root  root  20708 Jan 18 10:21 ejec_desemb_entregable.php
+-rw-r--r--. 1 root  root   1993 Jan 21 23:37 ejec_desemb_entregable_process.php
+-rw-r--r--. 1 root  root   1732 Jan 18 10:21 ejec_desemb_entregable_process.xml.php
+-rw-rw-r--. 1 admin admin 11772 Jan  6 18:07 ejec_desemb_lista.php
+-rw-rw-r--. 1 admin admin 10005 Jan  6 18:07 ejec_desemb_me_lista.php
+-rw-rw-r--. 1 admin admin  8602 Jan  6 18:07 ejec_desemb_me.php
+-rw-rw-r--. 1 admin admin  9706 Jan  6 18:07 ejec_desemb.php
+-rw-rw-r--. 1 admin admin  1446 Jan  6 18:07 ejec_desemb_process.php
+-rw-rw-r--. 1 admin admin 14113 Jan  6 18:07 prim_desemb_edit.php
+-rw-rw-r--. 1 admin admin  9476 Jan  6 18:07 prim_desemb_lista.php
+-rw-rw-r--. 1 admin admin  9292 Jan  6 18:07 prim_desemb.php
+-rw-rw-r--. 1 admin admin  1235 Jan  6 18:07 prim_desemb_process.php
+
+./monitoreofe/informes:
+total 628
+-rwxrwxr-x. 1 admin admin 151160 Jan  6 18:07 error_log
+-rwxr-xr-x. 1 root  root    7710 Feb 26 00:04 inf_financ_anx.php
+-rwxrwxr-x. 1 admin admin   6320 Jan  6 18:07 inf_financ_conclusiones.php
+-rwxrwxr-x. 1 admin admin   6195 Jan  6 18:07 inf_financ_docs.php
+-rwxrwxr-x. 1 admin admin  28519 Jan  6 18:07 inf_financ_edit.php
+-rwxrwxr-x. 1 admin admin  10630 Jan  6 18:07 inf_financ_excedente.php
+-rwxr-xr-x. 1 root  root    6777 Apr  9 19:57 inf_financ_fisico.php
+-rwxrwxr-x. 1 admin admin  25363 Jan  6 18:07 inf_financ_list.php
+-rwxr-xr-x. 1 root  root    7294 Apr  9 19:57 inf_financ_observa.php
+-rwxrwxr-x. 1 admin admin   9535 Jan  6 18:07 inf_financ_presup_gasto.php
+-rwxr-xr-x. 1 root  root   21987 Apr  9 19:57 inf_financ_presup_mp.php
+-rwxr-xr-x. 1 root  root    8009 Apr  9 19:57 inf_financ_presup.php
+-rwxr-xr-x. 1 root  root    8360 Apr  9 19:57 inf_financ_process.php
+-rwxrwxr-x. 1 admin admin   1513 Jan  6 18:07 inf_financ_process.xml.php
+drwxrwxrwx. 2 admin admin   4096 Jan 28 12:14 inf_mf
+-rwxrwxr-x. 1 admin admin   8616 Jan  6 18:07 inf_unico_anual_analisis_avances.php
+-rwxr-xr-x. 1 root  root    7079 Apr  9 19:57 inf_unico_anual_avance_fisico.php
+-rwxr-xr-x. 1 root  root    7150 Apr  9 19:57 inf_unico_anual_avance_pre.php
+-rwxrwxr-x. 1 admin admin  10415 Jan  6 18:07 inf_unico_anual_avances.php
+-rwxrwxr-x. 1 admin admin   6115 Jan  6 18:07 inf_unico_anual_calificacion.php
+-rwxrwxr-x. 1 admin admin  17102 Jan  6 18:07 inf_unico_anual_califica_conclu.php
+-rwxrwxr-x. 1 admin admin  21578 Jan  6 18:07 inf_unico_anual_edit.php
+-rwxrwxr-x. 1 admin admin  24703 Jan  6 18:07 inf_unico_anual_list.php
+-rwxrwxr-x. 1 admin admin  22767 Jan  6 18:07 inf_unico_anual_pre_edit.php
+-rwxrwxr-x. 1 admin admin   9701 Jan  6 18:07 inf_unico_anual_process.php
+-rwxrwxr-x. 1 admin admin   1457 Jan  6 18:07 inf_unico_anual_process.xml.php
+-rwxrwxr-x. 1 admin admin   5040 Jan  6 18:07 inf_unico_anual_prog_avan_comp.php
+-rwxrwxr-x. 1 admin admin   5597 Jan  6 18:07 inf_unico_anual_prog_sub_act.php
+-rwxr-xr-x. 1 root  root    7817 Feb 26 00:04 inf_visita_financ_anx.php
+-rwxrwxr-x. 1 admin admin  40923 Jan  6 18:07 inf_visita_financ_edit3.php
+-rwxrwxr-x. 1 admin admin  44822 Jan  6 18:07 inf_visita_financ_edit.php
+-rwxrwxr-x. 1 admin admin  24031 Jan  6 18:07 inf_visita_financ_list.php
+-rwxrwxr-x. 1 admin admin   3048 Jan  6 18:07 inf_visita_financ_process.php
+-rwxrwxr-x. 1 admin admin   1354 Jan  6 18:07 inf_visita_financ_process.xml.php
+drwxrwxr-x. 2 admin admin   4096 Jan  6 18:07 _notes
+-rwxrwxr-x. 1 admin admin     11 Jan  6 18:07 txtpruebas.txt
+
+./monitoreofe/informes/inf_mf:
+total 0
+
+./monitoreofe/informes/_notes:
+total 4
+-rwxrwxr-x. 1 admin admin 177 Jan  6 18:07 dwsync.xml
+
+./_notes:
+total 4
+-rw-rw-r--. 1 admin admin 173 Jan  6 18:07 dwsync.xml
+
+./pagoprov:
+total 64
+-rw-rw-r--. 1 admin admin   711 Jan  6 18:07 exportTXT.php
+-rw-rw-r--. 1 admin admin  8802 Jan  6 18:07 main.php
+-rw-rw-r--. 1 admin admin  8308 Jan  6 18:07 paso1.php
+-rw-rw-r--. 1 admin admin 10492 Jan  6 18:07 paso2_1.php
+-rw-rw-r--. 1 admin admin  9469 Jan  6 18:07 paso2.php
+-rw-rw-r--. 1 admin admin  4347 Jan  6 18:07 paso3.php
+-rw-rw-r--. 1 admin admin  1514 Jan  6 18:07 process.php
+
+./proyectos:
+total 24
+drwxrwxr-x. 6 admin admin 4096 Mar 27 21:21 anexos
+drwxrwxr-x. 4 admin admin 4096 Apr  9 19:57 datos
+drwxrwxr-x. 7 admin admin 4096 Apr  9 19:57 informes
+drwxrwxr-x. 2 admin admin 4096 Mar 25 19:21 planes
+drwxrwxr-x. 5 admin admin 4096 Apr 25 11:06 planifica
+drwxrwxr-x. 3 admin admin 4096 Mar 27 14:50 poa
+
+./proyectos/anexos:
+total 540
+-rwxrwxr-x. 1 admin admin 12263 Jan  6 18:07 amb_geo_edit.php
+-rwxrwxr-x. 1 admin admin 16554 Jan  6 18:07 amb_geo.php
+-rwxrwxr-x. 1 admin admin  3160 Jan  6 18:07 amb_geo_process.php
+drwxrwxrwx. 2 admin admin  4096 Jan 28 12:14 anexos
+-rwxr-xr-x. 1 root  root   7534 Mar 17 15:51 bene_cacerio_nuevo.php
+-rwxr-xr-x. 1 root  root  27900 Mar 27 15:37 bene_edit.php
+-rw-r--r--. 1 root  root   4126 Feb 26 00:04 bene_import.php
+-rwxrwxr-x. 1 admin admin 29766 Jan 26 17:41 bene_list.php
+-rwxrwxr-x. 1 admin admin 10626 Jan  6 18:07 bene_list_ubigeo.php
+-rwxr-xr-x. 1 root  root  19956 Mar 27 21:21 bene_process.php
+-rwxrwxr-x. 1 admin admin  1423 Jan  6 18:07 bene_process.xml.php
+-rwxrwxr-x. 1 admin admin  1999 Jan  6 18:07 bene_ubigeo_process.php
+-rwxr-xr-x. 1 root  root  21222 Feb 26 00:04 cambio_personal_edit.php
+-rwxrwxr-x. 1 admin admin 26801 Jan  8 16:05 cambio_personal.php
+-rwxr-xr-x. 1 root  root  14375 Jan 10 10:37 carta_fianza_edit.php
+-rwxr-xr-x. 1 root  root  24834 Jan 10 10:37 carta_fianza.php
+-rwxrwxr-x. 1 admin admin  2764 Jan  6 18:07 carta_fianza_process.php
+-rwxrwxr-x. 1 admin admin  1462 Jan  6 18:07 carta_fianza_process.xml.php
+drwxrwxrwx. 2 admin admin  4096 Mar 12 17:12 CF
+drwxrwxrwx. 2 admin admin  4096 Jan 28 12:14 CP
+-rwxrwxr-x. 1 admin admin  1602 Jan  6 18:07 ejec_resp_ret.php
+-rwxrwxr-x. 1 admin admin 12106 Jan  6 18:07 equi_edit.php
+-rwxrwxr-x. 1 admin admin 25186 Jan  6 18:07 equi_list.php
+-rwxrwxr-x. 1 admin admin 51193 Jan  6 18:07 error_log
+-rwxrwxr-x. 1 admin admin  6886 Jan  6 18:07 fuentes_edit.php
+-rwxrwxr-x. 1 admin admin 32076 Jan  6 18:07 fuentes_list.php
+-rwxrwxr-x. 1 admin admin  2454 Jan  6 18:07 fuentes_process.php
+-rwxrwxr-x. 1 admin admin  1452 Jan  6 18:07 fuentes_process.xml.php
+-rwxr-xr-x. 1 root  root   6888 Feb 26 00:04 objecion_compras_anexos.php
+-rwxrwxr-x. 1 admin admin 25812 Jan  8 16:05 objecion_compras_edit.php
+-rwxrwxr-x. 1 admin admin 26628 Jan  8 10:16 objecion_compras.php
+-rwxrwxr-x. 1 admin admin  5898 Jan  6 18:07 objecion_compras_process.php
+-rwxrwxr-x. 1 admin admin  1484 Jan  6 18:07 objecion_compras_process.xml.php
+-rwxrwxr-x. 1 admin admin  1875 Jan  6 18:07 process_cto.xml.php
+-rwxrwxr-x. 1 admin admin  4979 Jan  6 18:07 process_equi.php
+-rwxrwxr-x. 1 admin admin 13477 Jan  6 18:07 sect_prod_edit.php
+-rwxrwxr-x. 1 admin admin 16378 Jan  6 18:07 sect_prod.php
+-rwxrwxr-x. 1 admin admin  2638 Jan  6 18:07 sect_prod_process.php
+drwxrwxrwx. 2 root  root   4096 May  6 12:59 tmp_import
+
+./proyectos/anexos/anexos:
+total 0
+
+./proyectos/anexos/CF:
+total 316
+-rwxrwxrwx. 1 admin  admin  287008 Jan  6 18:07 C-09-47_edffsd_234234.jpg
+-rw-r--r--. 1 root   root        0 Jan 20 14:15 C-10-08_342453453_5343342.doc
+-rw-r--r--. 1 apache apache      0 Feb 27 16:17 C-12-001_5456456456456_3457654643636.doc
+-rw-r--r--. 1 apache apache  12695 Mar 12 17:12 C-12-003_00000000002_2.docx
+-rw-r--r--. 1 apache apache  12695 Mar 12 17:00 C-12-003_000000001_1.docx
+-rw-r--r--. 1 apache apache      0 Feb 27 16:22 C-13-001_00002_0900000191911111.doc
+-rw-r--r--. 1 apache apache      0 Feb 27 16:18 C-13-001_0001_14323234234234.doc
+
+./proyectos/anexos/CP:
+total 0
+
+./proyectos/anexos/tmp_import:
+total 2888
+-rw-r--r--. 1 apache apache 909388 Mar 25 23:19 5309a9e30913e6a4d7d14b17cd24f9ba.xlsx
+-rw-r--r--. 1 apache apache 913950 Mar 25 23:17 78f5eb65ab3a86f73be58c367519dad4.xlsx
+-rw-r--r--. 1 root   root    57978 Feb 18 09:03 9ab41ad4d309f598a5b12c266d4c7176.xlsx
+-rw-r--r--. 1 root   root    57978 Feb 18 09:03 9b85813efa1142b762214d1b7f7ae02b.xlsx
+-rw-r--r--. 1 root   root    86743 Mar 25 19:21 a7c5536f6fe9a896c2ab87196aa7daec.xlsx
+-rw-r--r--. 1 apache apache 909388 Mar 25 23:21 fe990c5b892b4132cda10053402314fb.xlsx
+
+./proyectos/datos:
+total 1036
+drwxrwxrwx. 2 admin admin   4096 May 12 14:26 anexos
+-rw-rw-r--. 1 admin admin 823191 Jan  6 18:07 error_log
+-rw-rw-r--. 1 admin admin  28529 Jan  6 18:07 lista.php
+-rw-rw-r--. 1 admin admin   8009 Jan  6 18:07 lista_proyectos.php
+drwxrwxr-x. 2 admin admin   4096 Jan  6 18:07 _notes
+-rw-rw-r--. 1 admin admin  18240 Jan  6 18:07 poa_tec_edit.php
+-rw-rw-r--. 1 admin admin   1995 Jan  6 18:07 process_datos.php
+-rw-r--r--. 1 root  root   16317 Feb 17 22:30 process.php
+-rw-rw-r--. 1 admin admin   2722 Jan  6 18:07 process.xml.php
+-rw-r--r--. 1 root  root    9222 Feb 26 00:04 proy_anexos.php
+-rw-r--r--. 1 root  root    5121 Apr  9 19:57 proy_aprueba.php
+-rw-rw-r--. 1 admin admin   1195 Jan  6 18:07 proy_aprueba_process.php
+-rw-rw-r--. 1 admin admin   5905 Jan  6 18:07 proy_correccion.php
+-rw-rw-r--. 1 admin admin   1153 Jan  6 18:07 proy_correccion_process.php
+-rw-r--r--. 1 root  root   11332 Feb 17 22:30 proy_edit_cta.php
+-rw-r--r--. 1 root  root   64565 Mar 11 17:56 proy_edit.php
+-rw-rw-r--. 1 admin admin   9481 Jan  6 18:07 proy_equiv_codi_details.php
+-rw-rw-r--. 1 admin admin  16737 Jan  6 18:07 proy_equiv_codi.php
+
+./proyectos/datos/anexos:
+total 7348
+-rwxrwxrwx. 1 admin  admin   171590 Jan  6 18:07 C-08-100_1_1.jpg
+-rwxrwxrwx. 1 admin  admin   339626 Jan  6 18:07 C-09-44_4_2.JPG
+-rwxrwxrwx. 1 admin  admin   339626 Jan  6 18:07 C-09-44_4_3.JPG
+-rwxrwxrwx. 1 admin  admin   275583 Jan  6 18:07 C-09-45_1_3.jpg
+-rwxrwxrwx. 1 admin  admin   275583 Jan  6 18:07 C-09-47_1_1.jpg
+-rwxrwxrwx. 1 admin  admin   211132 Jan  6 18:07 C-09-47_1_2.jpg
+-rwxrwxrwx. 1 admin  admin   287008 Jan  6 18:07 C-10-21_1_1.jpg
+-rwxrwxrwx. 1 admin  admin    40695 Jan  6 18:07 C-10-21_1_2.jpg
+-rwxrwxrwx. 1 admin  admin     5118 Jan  6 18:07 C-10-22_1_1.jpg
+-rwxrwxrwx. 1 admin  admin   295098 Jan  6 18:07 C-10-22_1_2.jpg
+-rwxrwxrwx. 1 root   root        10 Jan 28 12:14 C-11-111_1_1.txt
+-rwxrwxrwx. 1 root   root        10 Jan 28 12:14 C-11-456_1_1.txt
+-rw-r--r--. 1 apache apache   13145 Mar 27 18:44 C-12-050_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 12:33 C-12-051_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 12:56 C-12-052_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 13:01 C-12-053_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 13:05 C-12-054_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 13:09 C-12-055_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 13:13 C-12-056_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 13:17 C-12-057_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 13:26 C-12-059_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 13:29 C-12-060_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Mar 28 15:01 C-12-061_1_1.docx
+-rwxrwxrwx. 1 apache apache   13781 Feb 12 22:28 C-12-666_1_1.PDF
+-rwxrwxrwx. 1 apache apache 1671544 Feb 10 18:55 C-13-001_1_1.docx
+-rw-r--r--. 1 apache apache       0 Feb 15 23:13 C-13-003_1_1.doc
+-rw-r--r--. 1 apache apache   38407 Mar 17 13:06 C-13-003_1_1.pdf
+-rw-r--r--. 1 apache apache       0 Feb 15 23:26 C-13-003_1_2.doc
+-rwxrwxrwx. 1 apache apache  862704 Feb  5 17:08 C-13-008_1_1.pdf
+-rwxrwxrwx. 1 apache apache 1402989 Feb 10 18:49 C-13-021_1_1.docx
+-rw-r--r--. 1 apache apache 1052707 May 12 14:26 C-13-023_1_1.docx
+-rw-r--r--. 1 apache apache   13145 Apr  2 12:31 C-13-061_1_1.docx
+
+./proyectos/datos/_notes:
+total 4
+-rw-rw-r--. 1 admin admin 171 Jan  6 18:07 dwsync.xml
+
+./proyectos/informes:
+total 1156
+drwxrwxrwx. 2 admin admin  4096 Apr 11 18:02 anx_entregable
+drwxrwxrwx. 2 admin admin  4096 Feb  5 16:00 anx_financ
+drwxrwxrwx. 2 admin admin  4096 Feb  5 16:00 anx_me
+drwxrwxrwx. 2 admin admin  4096 Apr  1 17:58 anx_mes
+drwxrwxrwx. 2 admin admin  4096 Feb  5 16:00 anx_mi
+-rw-rw-r--. 1 admin admin  3782 Jan  6 18:07 error_log
+-rw-rw-r--. 1 admin admin  4872 Jan  6 18:07 inf_entregable_analisis.php
+-rw-r--r--. 1 root  root   7853 Feb 26 00:04 inf_entregable_anx.php
+-rw-r--r--. 1 root  root  28607 Feb 12 21:10 inf_entregable_edit.php
+-rw-r--r--. 1 root  root  25849 Feb 12 21:10 inf_entregable_edit_vb.php
+-rw-r--r--. 1 root  root   8130 Jan 21 21:04 inf_entregable_ind_comp.php
+-rw-r--r--. 1 root  root   7236 Jan 24 12:38 inf_entregable_ind_prod.php
+-rw-rw-r--. 1 admin admin  7702 Jan  6 18:07 inf_entregable_ind_prop.php
+-rw-r--r--. 1 root  root  30688 Jan 10 16:51 inf_entregable_list.php
+-rw-r--r--. 1 root  root  15125 Feb 16 12:20 inf_entregable_list_vb.php
+-rw-r--r--. 1 root  root   3982 Jan 17 21:31 inf_entregable_plan_at_list.php
+-rw-rw-r--. 1 admin admin 11052 Jan  6 18:07 inf_entregable_plan_at.php
+-rw-r--r--. 1 root  root   4947 Jan 17 21:31 inf_entregable_plan_capac_list.php
+-rw-rw-r--. 1 admin admin 11576 Jan  6 18:07 inf_entregable_plan_capac.php
+-rw-rw-r--. 1 admin admin  8122 Jan  6 18:07 inf_entregable_plan_cred.php
+-rw-rw-r--. 1 admin admin  8094 Jan  6 18:07 inf_entregable_planes.php
+-rw-r--r--. 1 root  root   4397 Jan 17 21:31 inf_entregable_plan_otros_list.php
+-rw-rw-r--. 1 admin admin 10274 Jan  6 18:07 inf_entregable_plan_otros.php
+-rw-r--r--. 1 root  root   8601 Feb 12 21:10 inf_entregable_process.php
+-rw-r--r--. 1 root  root   1841 Feb 12 21:10 inf_entregable_process.xml.php
+-rw-r--r--. 1 root  root   7757 Feb 26 00:04 inf_financ_anexos.php
+-rw-r--r--. 1 root  root  29935 Feb 12 21:10 inf_financ_edit.php
+-rw-r--r--. 1 root  root  29176 Feb 12 21:10 inf_financ_edit_vb.php
+-rw-r--r--. 1 root  root   9765 Mar  7 15:43 inf_financ_excedente.php
+-rw-rw-r--. 1 admin admin 25441 Jan  6 18:07 inf_financ_list_mon.php
+-rw-r--r--. 1 root  root  25382 Mar 11 17:46 inf_financ_list.php
+-rw-r--r--. 1 root  root  19285 Feb 16 12:20 inf_financ_list_vb.php
+-rw-r--r--. 1 root  root   6808 Mar  7 15:43 inf_financ_otrogasto.php
+-rw-rw-r--. 1 admin admin 10590 Jan  6 18:07 inf_financ_presup_bck.php
+-rw-r--r--. 1 root  root  25585 Apr  9 19:57 inf_financ_presup_mp.php
+-rw-r--r--. 1 root  root  10094 Mar 11 17:46 inf_financ_presup.php
+-rw-r--r--. 1 root  root   7288 Feb 12 21:10 inf_financ_process.php
+-rw-r--r--. 1 root  root   1856 Feb 12 21:10 inf_financ_process.xml.php
+-rw-r--r--. 1 root  root   8657 Feb 26 00:04 inf_mes_anx_foto.php
+-rw-r--r--. 1 root  root  26454 Feb 14 23:10 inf_mes_edit.php
+-rw-r--r--. 1 root  root  24559 Feb 28 22:19 inf_mes_edit_vb.php
+-rw-rw-r--. 1 admin admin  7520 Jan  6 18:07 inf_mes_ind_act.php
+-rw-r--r--. 1 root  root  25637 Jan 10 08:53 inf_mes_list.php
+-rw-r--r--. 1 root  root  13908 Feb 16 12:20 inf_mes_list_vb.php
+-rw-rw-r--. 1 admin admin  7347 Jan  6 18:07 inf_mes_prob_sol.php
+-rw-r--r--. 1 root  root   5809 Feb 12 21:10 inf_mes_process.php
+-rw-r--r--. 1 root  root   1863 Feb 12 21:10 inf_mes_process.xml.php
+-rw-rw-r--. 1 admin admin  9936 Jan  6 18:07 inf_mes_sub_act.php
+-rw-r--r--. 1 root  root   5919 Jan 13 03:04 inf_monext_act.php
+-rw-r--r--. 1 root  root   7765 Feb 26 00:04 inf_monext_anx.php
+-rw-r--r--. 1 root  root  12873 Jan 13 03:04 inf_monext_califica.php
+-rw-r--r--. 1 root  root   5542 Jan 13 03:04 inf_monext_conclusiones.php
+-rw-r--r--. 1 root  root  29764 Feb 16 12:20 inf_monext_edit.php
+-rw-r--r--. 1 root  root  29369 Feb 16 12:20 inf_monext_edit_vb.php
+-rw-r--r--. 1 root  root   5457 Jan 15 20:24 inf_monext_ind_comp.php
+-rw-r--r--. 1 root  root   7265 Jan 15 16:27 inf_monext_ind_prod.php
+-rw-r--r--. 1 root  root  31315 Feb 16 12:20 inf_monext_list.php
+-rw-r--r--. 1 root  root  14943 Feb 16 12:20 inf_monext_list_vb.php
+-rw-r--r--. 1 root  root   5690 Jan 13 03:04 inf_monext_process.php
+-rw-r--r--. 1 root  root   1700 Feb 16 12:20 inf_monext_process.xml.php
+-rw-r--r--. 1 root  root   5919 Jan 16 20:43 inf_monint_act.php
+-rw-r--r--. 1 root  root   7765 Feb 26 00:04 inf_monint_anx.php
+-rw-r--r--. 1 root  root  12873 Jan 16 20:43 inf_monint_califica.php
+-rw-r--r--. 1 root  root   5542 Jan 16 20:43 inf_monint_conclusiones.php
+-rw-r--r--. 1 root  root  29263 Jan 16 20:43 inf_monint_edit.php
+-rw-r--r--. 1 root  root   5458 Jan 16 20:43 inf_monint_ind_comp.php
+-rw-r--r--. 1 root  root   7121 Jan 16 20:43 inf_monint_ind_prod.php
+-rw-r--r--. 1 root  root  30531 Jan 16 20:43 inf_monint_list.php
+-rw-r--r--. 1 root  root   5642 Jan 16 20:43 inf_monint_process.php
+-rw-r--r--. 1 root  root   1304 Jan 16 20:43 inf_monint_process.xml.php
+-rw-rw-r--. 1 admin admin  6045 Jan  6 18:07 inf_trim_analisis.php
+-rw-r--r--. 1 root  root   7795 Feb 26 00:04 inf_trim_anx_foto.php
+-rw-rw-r--. 1 admin admin 32052 Jan  6 18:07 inf_trim_edit.php
+-rw-rw-r--. 1 admin admin  8290 Jan  6 18:07 inf_trim_ind_act.php
+-rw-rw-r--. 1 admin admin  8057 Jan  6 18:07 inf_trim_ind_comp.php
+-rw-rw-r--. 1 admin admin  9533 Jan  6 18:07 inf_trim_ind_prop.php
+-rw-rw-r--. 1 admin admin 25311 Jan  6 18:07 inf_trim_list.php
+-rw-rw-r--. 1 admin admin 13411 Jan  6 18:07 inf_trim_plan_at.php
+-rw-rw-r--. 1 admin admin  4497 Jan  6 18:07 inf_trim_plan_capac_list.php
+-rw-rw-r--. 1 admin admin 11517 Jan  6 18:07 inf_trim_plan_capac.php
+-rw-rw-r--. 1 admin admin  9014 Jan  6 18:07 inf_trim_plan_cred.php
+-rw-rw-r--. 1 admin admin  7687 Jan  6 18:07 inf_trim_planes.php
+-rw-rw-r--. 1 admin admin 14031 Jan  6 18:07 inf_trim_plan_otros.php
+-rw-rw-r--. 1 admin admin  8889 Jan  6 18:07 inf_trim_process.php
+-rw-rw-r--. 1 admin admin  1435 Jan  6 18:07 inf_trim_process.xml.php
+-rw-rw-r--. 1 admin admin  9349 Jan  6 18:07 inf_trim_sub_act.php
+
+./proyectos/informes/anx_entregable:
+total 5036
+-rw-r--r--. 1 apache apache 1466690 Mar  4 11:35 C-12-003_1_1_2_1.pdf
+-rw-r--r--. 1 apache apache  913182 Apr 11 18:00 C-12-051_1_3_2_1.xlsx
+-rw-r--r--. 1 apache apache  913182 Apr 11 18:00 C-12-052_1_1_2_1.xlsx
+-rw-r--r--. 1 apache apache  913182 Apr 11 18:00 C-12-053_1_1_2_1.xlsx
+-rw-r--r--. 1 apache apache   82032 Apr 11 18:02 C-12-055_1_1_2_1.pdf
+-rw-r--r--. 1 apache apache   17825 Apr 11 17:59 C-12-059_1_1_2_1.docx
+-rw-r--r--. 1 apache apache  821823 Feb  6 21:50 C-13-008_1_1_2_1.XLs
+-rw-r--r--. 1 apache apache   13145 Apr  8 11:44 C-13-061_1_8_2_1.docx
+
+./proyectos/informes/anx_financ:
+total 0
+
+./proyectos/informes/anx_me:
+total 0
+
+./proyectos/informes/anx_mes:
+total 4320
+-rwxrwxrwx. 1 admin  admin   371632 Jan  6 18:07 C-08-01_1_2_1_1.jpg
+-rwxrwxrwx. 1 admin  admin   410518 Jan  6 18:07 C-08-01_1_2_1_2.png
+-rwxrwxrwx. 1 admin  admin     2035 Jan  6 18:07 C-09-44_3_8_1_1.txt
+-rwxrwxrwx. 1 admin  admin  1794390 Jan  6 18:07 C-10-10_1_4_1_1.JPG
+-rw-r--r--. 1 apache apache   95744 Mar  4 14:12 C-12-001_1_3_1_1.xls
+-rw-r--r--. 1 apache apache  913182 Apr  1 17:58 C-12-002_2_1_1_1.xlsx
+-rw-r--r--. 1 apache apache  821823 Feb  6 21:39 C-13-008_1_1_1_1.XLs
+
+./proyectos/informes/anx_mi:
+total 168
+-rwxrwxrwx. 1 admin admin 171590 Jan  6 18:07 C-09-44_2_1_1.jpg
+
+./proyectos/planes:
+total 212
+-rw-rw-r--. 1 admin admin  6968 Jan  6 18:07 plan_at_edit.php
+-rw-rw-r--. 1 admin admin  9308 Jan  6 18:07 plan_at_list.php
+-rw-rw-r--. 1 admin admin 10151 Jan  6 18:07 plan_at_list_temas.php
+-rw-rw-r--. 1 admin admin 17318 Jan  6 18:07 plan_at.php
+-rw-rw-r--. 1 admin admin  1394 Jan  6 18:07 plan_at_process.php
+-rw-rw-r--. 1 admin admin  6741 Jan  6 18:07 plan_cap_edit.php
+-rw-rw-r--. 1 admin admin 10103 Jan  6 18:07 plan_cap_list.php
+-rw-r--r--. 1 root  root  12184 Mar 25 19:21 plan_cap_list_temas.php
+-rw-rw-r--. 1 admin admin 17309 Jan  6 18:07 plan_cap.php
+-rw-rw-r--. 1 admin admin  2432 Jan  6 18:07 plan_cap_process.php
+-rw-rw-r--. 1 admin admin 10648 Jan  6 18:07 plan_cre_benef.php
+-rw-rw-r--. 1 admin admin  7431 Jan  6 18:07 plan_cre_edit.php
+-rw-rw-r--. 1 admin admin  8698 Jan  6 18:07 plan_cre_list.php
+-rw-rw-r--. 1 admin admin 17333 Jan  6 18:07 plan_cre.php
+-rw-rw-r--. 1 admin admin  2803 Jan  6 18:07 plan_cre_process.php
+-rw-rw-r--. 1 admin admin  8069 Jan  6 18:07 plan_otros_edit.php
+-rw-rw-r--. 1 admin admin  8689 Jan  6 18:07 plan_otros_list.php
+-rw-rw-r--. 1 admin admin 16466 Jan  6 18:07 plan_otros.php
+-rw-rw-r--. 1 admin admin  1399 Jan  6 18:07 plan_otros_process.php
+
+./proyectos/planifica:
+total 832
+-rwxrwxr-x. 1 admin admin 11185 Jan  6 18:07 cost_edit.php
+-rwxr-xr-x. 1 root  root   9707 Feb 21 13:29 cost_fte_finan.php
+-rwxrwxr-x. 1 admin admin 23961 Jan  6 18:07 cost_index.php
+-rwxrwxr-x. 1 admin admin 10622 Jan  6 18:07 cost_lista.php
+-rwxrwxr-x. 1 admin admin 11489 Jan  6 18:07 cost_ope_edit.php
+-rwxr-xr-x. 1 root  root  11077 Feb 18 21:32 cost_ope_fte.php
+-rwxr-xr-x. 1 root  root  20192 Mar 17 15:51 cost_ope_index.php
+-rwxr-xr-x. 1 root  root  18397 Mar 17 15:51 cost_ope.php
+-rwxr-xr-x. 1 root  root   2008 Mar 17 15:51 cost_ope_process.php
+-rw-r--r--. 1 root  root   7324 Feb  6 11:02 cp_car_prog.php
+-rw-rw-r--. 1 admin admin  4539 Jan  6 18:07 cp_ent_prog.php
+-rw-r--r--. 1 root  root  31399 Feb 12 21:10 cp_index.php
+-rw-r--r--. 1 root  root   7887 Feb  6 11:02 cp_ind_prog.php
+-rw-r--r--. 1 root  root  12842 Mar 19 15:07 cp_lista.php
+-rw-r--r--. 1 root  root  12612 Feb  5 16:00 cp_lista.php.bkp
+-rwxr-xr-x. 1 root  root  27443 Feb 24 17:57 cronograma_index.php
+-rwxr-xr-x. 1 root  root  10645 Feb 24 17:57 cronograma_lista.php
+-rwxrwxr-x. 1 admin admin  3415 Jan  6 18:07 error_log
+-rwxrwxr-x. 1 admin admin  6432 Jan  6 18:07 ml_act_OE_edit.php
+-rwxrwxr-x. 1 admin admin  8024 Jan  6 18:07 ml_act_OE.php
+-rw-rw-r--. 1 admin admin 11456 Jan  6 18:07 ml_car_ind_act_edit.php
+-rw-r--r--. 1 root  root  10736 Feb 20 09:40 ml_car_ind_act.php
+-rwxr-xr-x. 1 root  root   3659 Apr 25 11:06 ml_def_OD.php
+-rwxrwxr-x. 1 admin admin  5337 Jan  6 18:07 ml_def_OE_edit.php
+-rwxrwxr-x. 1 admin admin  6031 Jan  6 18:07 ml_def_OE.php
+-rwxr-xr-x. 1 root  root   3934 Apr 25 11:06 ml_def_OG.php
+-rwxrwxr-x. 1 admin admin  5316 Jan  6 18:07 ml_hip_OD_edit.php
+-rwxrwxr-x. 1 admin admin  6083 Jan  6 18:07 ml_hip_OD.php
+-rwxrwxr-x. 1 admin admin  6234 Jan  6 18:07 ml_hip_OE_edit.php
+-rwxrwxr-x. 1 admin admin  7163 Jan  6 18:07 ml_hip_OE.php
+-rwxrwxr-x. 1 admin admin  5331 Jan  6 18:07 ml_hip_OG_edit.php
+-rwxrwxr-x. 1 admin admin  6103 Jan  6 18:07 ml_hip_OG.php
+-rwxr-xr-x. 1 root  root  13426 Jan 24 14:07 ml_ind_act_edit.php
+-rwxr-xr-x. 1 root  root   9044 Feb 20 09:40 ml_ind_act.php
+-rwxr-xr-x. 1 root  root  30008 Apr 25 11:06 ml_index.php
+-rwxr-xr-x. 1 root  root   6894 Feb  5 14:05 ml_ind_OD_edit.php
+-rwxrwxr-x. 1 admin admin  6675 Jan  6 18:07 ml_ind_OD.php
+-rwxr-xr-x. 1 root  root   8078 Feb 14 21:13 ml_ind_OE_edit.php
+-rwxrwxr-x. 1 admin admin  7410 Jan  6 18:07 ml_ind_OE.php
+-rwxr-xr-x. 1 root  root   6888 Feb  5 14:05 ml_ind_OG_edit.php
+-rwxrwxr-x. 1 admin admin  6265 Jan  6 18:07 ml_ind_OG.php
+-rwxr-xr-x. 1 root  root   7210 Feb 20 10:55 mp_edit.php
+-rwxrwxr-x. 1 admin admin 23790 Jan  6 18:07 mp_equipa_edit.php
+-rwxrwxr-x. 1 admin admin  9285 Jan  6 18:07 mp_equipa_fte.php
+-rwxr-xr-x. 1 root  root  10936 Feb 20 10:55 mp_equipa.php
+-rwxrwxr-x. 1 admin admin  2046 Jan  6 18:07 mp_equipa_process.php
+-rwxr-xr-x. 1 root  root  11502 Feb 20 15:35 mp_gast_func_costeo.php
+-rwxrwxr-x. 1 admin admin 21738 Jan  6 18:07 mp_gast_func_edit.php
+-rwxr-xr-x. 1 root  root   9588 Feb 21 13:29 mp_gast_func_fte.php
+-rwxrwxr-x. 1 admin admin 15643 Jan  6 18:07 mp_gast_func.php
+-rwxrwxr-x. 1 admin admin  3161 Jan  6 18:07 mp_gast_func_process.php
+-rwxrwxr-x. 1 admin admin 12307 Jan  6 18:07 mp_gastos_adm.php
+-rwxrwxr-x. 1 admin admin   940 Jan  6 18:07 mp_gastos_adm_process.php
+-rwxr-xr-x. 1 root  root  23107 Mar 17 15:51 mp_index.php
+-rwxrwxr-x. 1 admin admin 12193 Jan  6 18:07 mp_linea_base.php
+-rwxrwxr-x. 1 admin admin   945 Jan  6 18:07 mp_lineabase_process.php
+-rwxr-xr-x. 1 root  root  28926 Feb 16 19:36 mp_personal_edit.php
+-rwxrwxr-x. 1 admin admin  9271 Jan  6 18:07 mp_personal_fte.php
+-rwxr-xr-x. 1 root  root   9961 Feb 17 11:12 mp_personal.php
+-rwxrwxr-x. 1 admin admin  2593 Jan  6 18:07 mp_personal_process.php
+-rwxr-xr-x. 1 root  root   1041 Mar 17 15:51 mp_process.php
+drwxrwxr-x. 2 admin admin  4096 Jan  6 18:07 _notes
+drwxrwxrwx. 2 admin admin  4096 Jan 28 12:14 per_tdr
+-rwxrwxr-x. 1 admin admin 29413 Jan  6 18:07 poa_index.php
+-rwxr-xr-x. 1 root  root  24512 Feb 24 17:57 poa_meta_edit.php
+-rwxr-xr-x. 1 root  root   7736 Feb 24 17:57 poa_sact_edit.php
+-rwxrwxr-x. 1 admin admin  2598 Jan  6 18:07 process.xml.php
+-rwxrwxr-x. 1 admin admin 11879 Jan  6 18:07 proy_aprueba.php
+-rwxrwxr-x. 1 admin admin  5045 Jan  6 18:07 proy_aprueba_process.php
+drwxrwxrwx. 2 root  root   4096 Feb 18 15:07 tmp_import
+
+./proyectos/planifica/_notes:
+total 4
+-rwxrwxr-x. 1 admin admin 170 Jan  6 18:07 dwsync.xml
+
+./proyectos/planifica/per_tdr:
+total 0
+
+./proyectos/planifica/tmp_import:
+total 0
+
+./proyectos/poa:
+total 724
+drwxrwxrwx. 2 admin admin  4096 Feb 16 17:07 anx
+-rwxrwxr-x. 1 admin admin  2940 Jan  6 18:07 error_log
+-rwxrwxr-x. 1 admin admin  7012 Jan  6 18:07 mp_edit.php
+-rwxrwxr-x. 1 admin admin 25293 Jan  6 18:07 mp_equipa_edit.php
+-rwxrwxr-x. 1 admin admin  8729 Jan  6 18:07 mp_equipa_fte.php
+-rwxrwxr-x. 1 admin admin  2046 Jan  6 18:07 mp_equipa_process.php
+-rwxrwxr-x. 1 admin admin 10818 Jan  6 18:07 mp_gast_func_costeo.php
+-rwxrwxr-x. 1 admin admin 23671 Jan  6 18:07 mp_gast_func_edit.php
+-rwxrwxr-x. 1 admin admin  9182 Jan  6 18:07 mp_gast_func_fte.php
+-rwxrwxr-x. 1 admin admin  3161 Jan  6 18:07 mp_gast_func_process.php
+-rwxrwxr-x. 1 admin admin  8903 Jan  6 18:07 mp_gastos_adm.php
+-rwxrwxr-x. 1 admin admin   940 Jan  6 18:07 mp_gastos_adm_process.php
+-rwxrwxr-x. 1 admin admin 20693 Jan  6 18:07 mp_linea_base.php
+-rwxrwxr-x. 1 admin admin   945 Jan  6 18:07 mp_lineabase_process.php
+-rwxrwxr-x. 1 admin admin  1080 Jan  6 18:07 mp_process.php
+-rwxr-xr-x. 1 root  root  13023 Mar 20 12:16 poa_fin_cost_ope_edit.php
+-rwxrwxr-x. 1 admin admin  9934 Jan  6 18:07 poa_fin_cost_ope_fte.php
+-rwxrwxr-x. 1 admin admin 17602 Jan  6 18:07 poa_fin_cost_ope.php
+-rwxr-xr-x. 1 root  root  15215 Feb 14 16:16 poa_fin_edit.php
+-rw-r--r--. 1 root  root  15694 Feb 14 16:16 poa_fin_edit_vb.php
+-rwxrwxr-x. 1 admin admin  8546 Jan  6 18:07 poa_fin_equipa_fte.php
+-rwxrwxr-x. 1 admin admin  8766 Jan  6 18:07 poa_fin_equipa.php
+-rwxrwxr-x. 1 admin admin  2046 Jan  6 18:07 poa_fin_equipa_process.php
+-rwxrwxr-x. 1 admin admin 10687 Jan  6 18:07 poa_fin_gast_func_costeo.php
+-rwxrwxr-x. 1 admin admin  8999 Jan  6 18:07 poa_fin_gast_func_fte.php
+-rwxrwxr-x. 1 admin admin 14199 Jan  6 18:07 poa_fin_gast_func.php
+-rwxrwxr-x. 1 admin admin  3161 Jan  6 18:07 poa_fin_gast_func_process.php
+-rwxr-xr-x. 1 root  root   9800 Feb  6 15:02 poa_fin_gastos_adm.php
+-rwxrwxr-x. 1 admin admin   940 Jan  6 18:07 poa_fin_gastos_adm_process.php
+-rwxrwxr-x. 1 admin admin  5562 Jan  6 18:07 poa_fin_linea_base.php
+-rwxrwxr-x. 1 admin admin 24103 Jan  6 18:07 poa_fin_list.php
+-rw-r--r--. 1 root  root  13685 Feb 16 12:20 poa_fin_list_vb.php
+-rwxrwxr-x. 1 admin admin 34376 Jan  6 18:07 poa_fin_personal_edit.php
+-rwxrwxr-x. 1 admin admin  9112 Jan  6 18:07 poa_fin_personal_fte.php
+-rwxr-xr-x. 1 root  root   9764 Mar 27 14:50 poa_fin_personal.php
+-rwxrwxr-x. 1 admin admin  2593 Jan  6 18:07 poa_fin_personal_process.php
+-rwxrwxr-x. 1 admin admin  2048 Jan  6 18:07 poa_fin_process.php
+-rwxrwxr-x. 1 admin admin  8009 Jan  6 18:07 poa_sact_editar.php
+-rwxrwxr-x. 1 admin admin  8127 Jan  6 18:07 poa_sub_act.php
+-rwxrwxr-x. 1 admin admin  6987 Jan  6 18:07 poa_tec_act.php
+-rwxr-xr-x. 1 root  root   8907 Feb  6 11:02 poa_tec_comp.php
+-rwxr-xr-x. 1 root  root  23489 Feb 16 00:26 poa_tec_edit.php
+-rw-r--r--. 1 root  root  18494 Feb 24 18:43 poa_tec_edit_vb.php
+-rw-r--r--. 1 root  root  12644 Feb  6 11:02 poa_tec_ind_act_lista.php
+-rw-r--r--. 1 root  root  11829 Feb  5 16:00 poa_tec_ind_act_lista.php.bkp
+-rwxr-xr-x. 1 root  root  18735 Feb  6 11:02 poa_tec_ind_act.php
+-rwxr-xr-x. 1 root  root  16435 Feb  5 16:00 poa_tec_ind_act.php.bkp
+-rwxr-xr-x. 1 root  root   7839 Feb 14 19:15 poa_tec_inf_adic.php
+-rwxr-xr-x. 1 root  root  30660 Feb 25 15:50 poa_tec_list.php
+-rw-r--r--. 1 root  root  18694 Feb 16 12:20 poa_tec_list_vb.php
+-rwxr-xr-x. 1 root  root   7238 Feb 14 16:16 poa_tec_process.php
+-rwxrwxr-x. 1 admin admin 14246 Jan  6 18:07 poa_tec_sub_act_metas_back.php
+-rwxrwxr-x. 1 admin admin 27599 Jan  6 18:07 poa_tec_sub_act_metas.php
+-rwxr-xr-x. 1 root  root  13460 Feb  6 11:02 poa_tec_sub_act.php
+-rwxr-xr-x. 1 root  root   2075 Feb 14 16:16 poa.xml.php
+
+./proyectos/poa/anx:
+total 168
+-rw-r--r--. 1 apache apache 170549 Feb 16 17:07 C-12-002_1_1.docx
+-rw-r--r--. 1 apache apache      0 Feb 16 00:26 C-13-003_1_1.doc
+
+./reportes:
+total 2100
+drwxrwxr-x. 3 admin admin   4096 Jan  6 18:07 chart
+-rw-rw-r--. 1 admin admin 457850 Jan  6 18:07 error_log
+-rw-r--r--. 1 root  root    1975 Feb 26 09:41 exportDOC.php
+-rw-rw-r--. 1 admin admin   1512 Jan  6 18:07 exportHTM.php
+-rw-r--r--. 1 root  root    2322 Jan  9 10:23 exportPDF.php
+-rw-r--r--. 1 root  root    1792 Feb 16 00:05 exportXLS.php
+-rw-rw-r--. 1 admin admin   4904 Jan  6 18:07 filter_benf_anio.php
+-rw-rw-r--. 1 admin admin   6592 Jan  6 18:07 filter_concurso_ejecutor.php
+-rw-rw-r--. 1 admin admin   5502 Jan  6 18:07 filter_concurso_estado.php
+-rw-rw-r--. 1 admin admin   8526 Jan  6 18:07 filter_desembolsos.php
+-rw-rw-r--. 1 admin admin   7473 Jan  6 18:07 filter_desemb_periodo.php
+-rw-rw-r--. 1 admin admin   6656 Jan  6 18:07 filter_direc_insti.php
+-rw-rw-r--. 1 admin admin   6080 Jan  6 18:07 filter_inst_ejecutoras.php
+-rw-rw-r--. 1 admin admin   8689 Jan  6 18:07 filter_matriz_moni.php
+-rw-rw-r--. 1 admin admin   5279 Jan  6 18:07 filter_matriz.php
+-rw-rw-r--. 1 admin admin   5694 Jan  6 18:07 filter_process_json.php
+-rw-rw-r--. 1 admin admin   7003 Jan  6 18:07 filter_proy_anual.php
+-rw-rw-r--. 1 admin admin   6958 Jan  6 18:07 filter_proy_cf.php
+-rw-rw-r--. 1 admin admin   7992 Jan  6 18:07 filter_proy_contact.php
+-rw-rw-r--. 1 admin admin   6875 Jan  6 18:07 filter_proyecto_fte.php
+-rw-rw-r--. 1 admin admin   7055 Jan  6 18:07 filter_proy_ficha.php
+-rw-rw-r--. 1 admin admin   6272 Jan  6 18:07 filter_proy_inf_anio_mes.php
+-rw-rw-r--. 1 admin admin   7429 Jan  6 18:07 filter_proy_inf_fte.php
+-rw-rw-r--. 1 admin admin   7755 Jan  6 18:07 filter_proy_inf_mf_fte.php
+-rw-rw-r--. 1 admin admin   5185 Jan  8 16:05 filter_proy_noc_cf.php
+-rw-rw-r--. 1 admin admin   5915 Jan  6 18:07 filter_proy_periodo.php
+-rw-rw-r--. 1 admin admin   6571 Jan  6 18:07 filter_proy.php
+-rw-rw-r--. 1 admin admin   7259 Jan  6 18:07 filter_proy_planc.php
+-rw-rw-r--. 1 admin admin   8799 Jan  6 18:07 filter_proy_poa.php
+-rw-rw-r--. 1 admin admin    210 Jan  6 18:07 filter_pruebas.php
+-rw-rw-r--. 1 admin admin  29220 Jan  6 18:07 matriz_moni.php
+drwxrwxr-x. 2 admin admin   4096 Jan  6 18:07 _notes
+-rw-r--r--. 1 root  root   14595 Feb 26 09:41 reportviewer.php
+-rw-rw-r--. 1 admin admin   3559 Jan  6 18:07 rpt_ambito_geogra.php
+-rw-rw-r--. 1 admin admin   2216 Jan  6 18:07 rpt_apo_proy_tipoinst.img.php
+-rw-rw-r--. 1 admin admin   3088 Jan  6 18:07 rpt_apo_proy_tipoinst.php
+-rw-r--r--. 1 root  root    5697 Jan 16 12:03 rpt_avance_tec_finan.php
+-rw-r--r--. 1 root  root    6559 Apr  9 19:57 rpt_avc_financ_fisico.php
+-rw-r--r--. 1 root  root   13645 Apr  9 19:57 rpt_avc_financ_presup.php
+-rw-rw-r--. 1 admin admin   5752 Jan  6 18:07 rpt_bench_ope.php
+-rw-rw-r--. 1 admin admin   6853 Jan  6 18:07 _rpt_benef.php
+-rw-r--r--. 1 root  root    7449 Mar 17 15:51 rpt_benef.php
+-rw-r--r--. 1 root  root    9866 Mar 17 15:51 rpt_benef_tot.php
+-rw-r--r--. 1 root  root   10564 Jan 10 10:37 rpt_carta_fianza.php
+-rw-r--r--. 1 root  root   11183 Mar 19 15:07 rpt_cp.php
+-rw-r--r--. 1 root  root   11032 Feb  5 16:00 rpt_cp.php.bkp
+-rw-rw-r--. 1 admin admin  12017 Jan  6 18:07 rpt_cron_desemb.php
+-rw-rw-r--. 1 admin admin  12200 Jan  6 18:07 rpt_cron_desemb_poa.php
+-rw-rw-r--. 1 admin admin   6187 Jan  6 18:07 rpt_cron_desemb_trim.php
+-rw-rw-r--. 1 admin admin  11989 Jan  6 18:07 rpt_cron_ejec_desembolsos.php
+-rw-rw-r--. 1 admin admin  12492 Jan  6 18:07 rpt_cronograma_anual.php
+-rw-rw-r--. 1 admin admin   5788 Jan  6 18:07 rpt_cron_plan.php
+-rw-rw-r--. 1 admin admin   9233 Jan  6 18:07 rpt_desemb_per_conc_me.php
+-rw-rw-r--. 1 admin admin   8668 Jan  6 18:07 rpt_desemb_per_conc.php
+-rw-rw-r--. 1 admin admin   3123 Jan  6 18:07 rpt_desm_fe.php
+-rw-rw-r--. 1 admin admin   3945 Jan  6 18:07 rpt_dg_me.php
+-rw-rw-r--. 1 admin admin   8202 Jan  6 18:07 rpt_dir_contactos.php
+-rw-rw-r--. 1 admin admin   5479 Jan  6 18:07 rpt_dir_equi_eje.php
+-rw-rw-r--. 1 admin admin   3106 Jan  6 18:07 rpt_ejec_anio.php
+-rw-r--r--. 1 root  root    3921 Jan  9 10:23 rpt_equipo_fe.php
+-rw-rw-r--. 1 admin admin   5269 Jan  6 18:07 rpt_equi_proy.php
+-rw-rw-r--. 1 admin admin   4031 Jan  6 18:07 rpt_ff.php
+-rw-r--r--. 1 root  root   24020 Feb 12 21:10 rpt_ficha_proyecto.php
+-rw-r--r--. 1 root  root    9456 Jan 13 12:43 rpt_giro_cheques.php
+-rw-rw-r--. 1 admin admin  30295 Jan  6 18:07 rpt_inf_anual.php
+-rw-rw-r--. 1 admin admin   9102 Jan  6 18:07 rpt_inf_aprob_des.php
+-rw-r--r--. 1 root  root    9888 Jan 10 17:05 rpt_inf_aut_ch.php
+-rw-rw-r--. 1 admin admin   9964 Jan  6 18:07 rpt_inf_autoriza_cheques.php
+-rw-rw-r--. 1 admin admin  31825 Jan  6 18:07 rpt_inf_eva_financ.php
+-rw-rw-r--. 1 admin admin  11928 Jan  6 18:07 rpt_inf_finac_anexo1.php
+-rw-rw-r--. 1 admin admin   5331 Jan  6 18:07 rpt_inf_finac_anexo2.php
+-rw-rw-r--. 1 admin admin  15029 Jan  6 18:07 rpt_inf_finac_anexo3.php
+-rw-rw-r--. 1 admin admin  67064 Jan  6 18:07 rpt_inf_financiero.php
+-rw-rw-r--. 1 admin admin   4308 Jan  6 18:07 rpt_inf_me_conclusiones.php
+-rw-r--r--. 1 root  root   17262 Feb 15 18:32 rpt_inf_mensual_tec.php
+-rw-rw-r--. 1 admin admin   5935 Jan  6 18:07 rpt_inf_mes_cumpli2.php
+-rw-rw-r--. 1 admin admin   5942 Jan  6 18:07 rpt_inf_mes_cumpli_acum2.php
+-rw-rw-r--. 1 admin admin   5915 Jan  6 18:07 rpt_inf_mes_cumpli_acum.php
+-rw-rw-r--. 1 admin admin   5875 Jan  6 18:07 rpt_inf_mes_cumpli.php
+-rw-rw-r--. 1 admin admin  23867 Jan  6 18:07 rpt_inf_mes_edit.php
+-rw-rw-r--. 1 admin admin   8921 Jan  6 18:07 rpt_inf_mes_financ_list.php
+-rw-rw-r--. 1 admin admin   7580 Jan  6 18:07 rpt_inf_mes_list.php
+-rw-rw-r--. 1 admin admin   4274 Jan  6 18:07 rpt_inf_mi_conclusiones.php
+-rw-rw-r--. 1 admin admin  36574 Jan  6 18:07 rpt_inf_mon_ext.php
+-rw-rw-r--. 1 admin admin  12903 Jan  6 18:07 rpt_inf_presupuesto.php
+-rw-rw-r--. 1 admin admin   6560 Jan  6 18:07 rpt_inf_trim_cumpli_acum.php
+-rw-rw-r--. 1 admin admin   5889 Jan  6 18:07 rpt_inf_trim_cumpli.php
+-rw-rw-r--. 1 admin admin  45620 Jan  6 18:07 rpt_inf_trim_edit.php
+-rw-rw-r--. 1 admin admin   6647 Jan  6 18:07 rpt_inf_trim_plan_at.php
+-rw-rw-r--. 1 admin admin   7861 Jan  6 18:07 rpt_inf_trim_plan_capac.php
+-rw-rw-r--. 1 admin admin  29917 Jan  6 18:07 rpt_inf_visita_financ.php
+-rw-rw-r--. 1 admin admin  43673 Jan  6 18:07 rpt_inf_visita_mon_tec.php
+-rw-rw-r--. 1 admin admin   6972 Jan  6 18:07 rpt_inst_ejecutoras.php
+-rw-rw-r--. 1 admin admin  11191 Jan  6 18:07 rpt_instituciones.php
+-rw-rw-r--. 1 admin admin   4703 Jan  6 18:07 rpt_inst_monitoras.php
+-rw-rw-r--. 1 admin admin   8614 Jan  6 18:07 rpt_inst_monitoras_proyecto.php
+-rw-rw-r--. 1 admin admin   4814 Jan  6 18:07 rpt_inst_proy_ctas_banco.php
+-rw-rw-r--. 1 admin admin  11886 Jan  6 18:07 rpt_lista.php
+-rw-rw-r--. 1 admin admin  12814 Jan  6 18:07 rpt_mf_inf_avpresup_anexo1.php
+-rw-rw-r--. 1 admin admin   5630 Jan  6 18:07 rpt_mf_inf_avpresup_anexo2.php
+-rw-rw-r--. 1 admin admin  13721 Jan  6 18:07 rpt_mf_inf_avpresup_anexo3.php
+-rw-r--r--. 1 root  root   12824 Feb 12 21:10 rpt_ml.php
+-rw-rw-r--. 1 admin admin   1587 Jan  6 18:07 rpt_montoproy_tipoinst.img.php
+-rw-rw-r--. 1 admin admin   2892 Jan  6 18:07 rpt_montoproy_tipoinst.php
+-rw-rw-r--. 1 admin admin   3435 Jan  6 18:07 rpt_nivel_ejec_anio.php
+-rw-r--r--. 1 root  root   15840 Jan 13 16:03 rpt_no_objecion_compras.php
+-rw-rw-r--. 1 admin admin   1571 Jan  6 18:07 rpt_nroproy_region.img.php
+-rw-rw-r--. 1 admin admin  10372 Jan  6 18:07 rpt_nroproy_region.php
+-rw-rw-r--. 1 admin admin   1567 Jan  6 18:07 rpt_nroproy_tipoinst.img.php
+-rw-rw-r--. 1 admin admin  12546 Jan  6 18:07 rpt_nroproy_tipoinst.php
+-rw-r--r--. 1 root  root    6194 Jan 28 12:14 rpt_plan_asistencia.php
+-rw-rw-r--. 1 admin admin  18581 Jan  6 18:07 rpt_plan_capac_acti.php
+-rw-r--r--. 1 root  root    8761 Jan 28 12:14 rpt_plan_capacitacion.php
+-rw-rw-r--. 1 admin admin   8893 Jan  6 18:07 rpt_plan_creditos.php
+-rw-r--r--. 1 root  root    5524 Jan 28 12:14 rpt_plan_otros_servicios.php
+-rw-rw-r--. 1 admin admin   8764 Jan  6 18:07 rpt_poa_anual.php
+-rw-rw-r--. 1 admin admin  53315 Jan  6 18:07 rpt_poa_fin.php
+-rw-r--r--. 1 root  root   22433 Feb 12 21:10 rpt_poa.php
+-rw-rw-r--. 1 admin admin   4105 Jan  6 18:07 rpt_poa_puntos_atencion.php
+-rw-rw-r--. 1 admin admin  67543 Jan  6 18:07 rpt_poa_tecfin.php
+-rw-r--r--. 1 root  root   25343 Feb  5 16:00 rpt_poa_tec.php
+-rw-r--r--. 1 root  root   25310 Feb  5 16:00 rpt_poa_tec.php.bkp
+-rw-r--r--. 1 root  root   16747 Feb 27 10:29 rpt_presup_analitico.php
+-rw-rw-r--. 1 admin admin   1571 Jan  6 18:07 rpt_process.xml.php
+-rw-rw-r--. 1 admin admin   4838 Jan  6 18:07 rpt_proy_monxestado.php
+-rw-rw-r--. 1 admin admin   5602 Jan  6 18:07 rpt_rel_inst.php
+-rw-rw-r--. 1 admin admin  11445 Jan  6 18:07 rpt_rel_proy.php
+-rw-rw-r--. 1 admin admin   2354 Jan  6 18:07 rpt_secproy_tipoinst.img.php
+-rw-rw-r--. 1 admin admin   7032 Jan  6 18:07 rpt_secproy_tipoinst.php
+-rw-r--r--. 1 root  root    3536 Jan 28 12:14 rpt_sector_prod.php
+-rw-rw-r--. 1 admin admin  19394 Jan  8 16:05 rpt_sol_cambio_per.php
+-rw-rw-r--. 1 admin admin   4867 Jan  6 18:07 rpt_tipo_serv_rec_det.php
+-rw-rw-r--. 1 admin admin   4075 Jan  6 18:07 rpt_tipo_serv_rec.php
+
+./reportes/chart:
+total 16
+-rw-rw-r--. 1 admin admin 2059 Jan  6 18:07 index.php
+-rw-rw-r--. 1 admin admin 3888 Jan  6 18:07 maxChart.class.php
+-rw-rw-r--. 1 admin admin  990 Jan  6 18:07 readme.txt
+drwxrwxr-x. 3 admin admin 4096 Jan  6 18:07 style
+
+./reportes/chart/style:
+total 8
+drwxrwxr-x. 2 admin admin 4096 Jan  6 18:07 images
+-rw-rw-r--. 1 admin admin 2727 Jan  6 18:07 style.css
+
+./reportes/chart/style/images:
+total 60
+-rw-rw-r--. 1 admin admin  490 Jan  6 18:07 bar1.png
+-rw-rw-r--. 1 admin admin  571 Jan  6 18:07 bar2.png
+-rw-rw-r--. 1 admin admin  544 Jan  6 18:07 bar3.png
+-rw-rw-r--. 1 admin admin  550 Jan  6 18:07 bar4.png
+-rw-rw-r--. 1 admin admin  437 Jan  6 18:07 barh1.png
+-rw-rw-r--. 1 admin admin  534 Jan  6 18:07 barh2.png
+-rw-rw-r--. 1 admin admin  342 Jan  6 18:07 barh3.png
+-rw-rw-r--. 1 admin admin  516 Jan  6 18:07 barh4.png
+-rw-rw-r--. 1 admin admin  534 Jan  6 18:07 barh5.png
+-rw-rw-r--. 1 admin admin  511 Jan  6 18:07 button.gif
+-rw-rw-r--. 1 admin admin  297 Jan  6 18:07 hbg.gif
+-rw-rw-r--. 1 admin admin  455 Jan  6 18:07 header_bg.gif
+-rw-rw-r--. 1 admin admin 1581 Jan  6 18:07 header_left.gif
+-rw-rw-r--. 1 admin admin  579 Jan  6 18:07 header_right.gif
+-rw-rw-r--. 1 admin admin 1333 Jan  6 18:07 nok.gif
+
+./reportes/_notes:
+total 4
+-rw-rw-r--. 1 admin admin 174 Jan  6 18:07 dwsync.xml
+
+./SpryAssets:
+total 8
+-rw-rw-r--. 1 admin admin 55 Jan  6 18:07 SpryMenuBarDownHover.gif
+-rw-rw-r--. 1 admin admin 55 Jan  6 18:07 SpryMenuBarRightHover.gif

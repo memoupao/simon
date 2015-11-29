@@ -1,0 +1,238 @@
+/*
+// -------------------------------------------------->
+// AQ 2.0 [02-01-2014 18:36]
+// Lista el Plan de Asistencia Técnica 
+// del Informe de Entregable
+// --------------------------------------------------<
+*/
+DROP PROCEDURE IF EXISTS `sp_lis_inf_entregable_at`;
+
+DELIMITER $$
+
+CREATE PROCEDURE `sp_lis_inf_entregable_at`(IN _proy VARCHAR(10), IN _ver INT,
+ IN _anio INT,  IN _entregable INT,  IN _dpto CHAR(2),  IN _prov CHAR(2), 
+ IN _dist CHAR(2),  IN _case CHAR(2))
+BEGIN
+DECLARE _sql       LONGTEXT;
+DECLARE _tmpsql    TEXT DEFAULT ' 
+SELECT  ben.t11_cod_bene, 
+    ben.t11_dni, 
+    CONCAT(ben.t11_ape_pat, \' \' ,ben.t11_ape_mat, \', \', ben.t11_nom) AS nombres,
+    sex.descrip AS sexo, 
+    ben.t11_edad, 
+    niv.descrip AS nivel, 
+    sec.descrip AS sector, 
+    ben.t11_unid_prod_1 as t11_nro_up_a, 
+    ben.t11_nro_up_b, 
+    ben.t11_nom_prod, 
+    ben.t11_direccion, 
+    ben.t11_ciudad, 
+    ben.t11_telefono, 
+    ben.t11_celular, 
+    ben.t11_mail, 
+    ben.t11_act_princ, 
+    est.descrip AS estado
+{subquerys}
+FROM      t11_bco_bene ben
+INNER JOIN t12_plan_at plan ON (ben.t02_cod_proy = plan.t02_cod_proy AND plan.t02_version={_ver}) 
+LEFT JOIN adm_tablas_aux sex ON (ben.t11_sexo = sex.codi) 
+LEFT JOIN adm_tablas_aux niv ON (ben.t11_nivel_educ = niv.codi) 
+LEFT JOIN adm_tablas_aux sec ON (ben.t11_sec_prod = sec.codi) 
+LEFT JOIN adm_tablas_aux est ON (ben.t11_estado = est.codi) 
+WHERE 
+      ben.t02_cod_proy = \'{_proy}\'
+  AND ben.t11_dpto     = (CASE WHEN \'{_dpto}\'=\'\' THEN ben.t11_dpto ELSE \'{_dpto}\' END )
+  AND ben.t11_prov     = (CASE WHEN \'{_prov}\'=\'\' THEN ben.t11_prov ELSE \'{_prov}\' END )
+  AND ben.t11_dist     = (CASE WHEN \'{_dist}\'=\'\' OR \'{_dist}\'=\'00\'  THEN ben.t11_dist ELSE \'{_dist}\' END )
+  AND IFNULL(ben.t11_case,\'\')     = (CASE WHEN \'{_case}\'=\'\' OR \'{_case}\'=\'00\' THEN IFNULL(ben.t11_case,\'\') ELSE \'{_case}\' END )
+  
+GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+ORDER BY nombres ASC; ' ;
+DECLARE _tmpsubsql TEXT DEFAULT '
+     (
+      SELECT cap.t15_avance 
+        FROM t25_inf_entregable_at cap
+       WHERE cap.t02_cod_proy = \'{_proy}\'
+         AND CONCAT(cap.t08_cod_comp,\'.\',cap.t09_cod_act,\'.\',cap.t09_cod_sub) = \'{_codsub}\'
+         AND cap.t25_anio = {_anio}
+         AND cap.t25_entregable = {_entregable}
+         AND cap.t02_version = {_ver}
+         AND cap.t11_cod_bene = ben.t11_cod_bene
+      ) AS \'{_codsubtema}\'' ;
+      
+DECLARE _subsql TEXT;
+DECLARE _contador  INT ;
+DECLARE _codfte   INT ;
+DECLARE _nomfte   VARCHAR(50) ;
+DECLARE _codFE    INT DEFAULT 10 ;
+DECLARE _escape INT DEFAULT 0;
+DECLARE _codsub CHAR(10);
+DECLARE _codtema INT;
+DECLARE _nomtema VARCHAR(150);
+DECLARE _nrohora DOUBLE ;
+DECLARE _curtemas CURSOR 
+                 FOR 
+            SELECT  CONCAT(plan.t08_cod_comp,'.',plan.t09_cod_act,'.',plan.t09_cod_sub) AS subact,
+                sub.t09_cod_sub,
+                sub.t09_sub,
+                plan.t12_hor_cap
+            FROM       t12_plan_at       plan
+            INNER JOIN t09_subact       sub ON (sub.t02_cod_proy=plan.t02_cod_proy AND sub.t02_version=plan.t02_version AND sub.t08_cod_comp=plan.t08_cod_comp AND sub.t09_cod_act=plan.t09_cod_act AND sub.t09_cod_sub=plan.t09_cod_sub)
+            WHERE plan.t02_cod_proy = _proy
+              AND plan.t02_version  = _ver
+              AND plan.t12_modulo > 0
+            ORDER BY t12_modulo, subact  ;
+              
+DECLARE CONTINUE HANDLER FOR SQLSTATE '02000' SET _escape = 1;
+SET _sql = '' ;
+OPEN _curtemas;
+REPEAT
+FETCH _curtemas INTO _codsub , _codtema , _nomtema , _nrohora ;
+IF NOT _escape THEN
+    SET _subsql = REPLACE(_tmpsubsql,'{_proy}',_proy);
+    SET _subsql = REPLACE(_subsql,'{_ver}',_ver);
+    SET _subsql = REPLACE(_subsql,'{_codsub}',_codsub);
+    -- SET _subsql = REPLACE(_subsql,'{_codtema}',_codtema);
+    SET _subsql = REPLACE(_subsql,'{_anio}',_anio);
+    SET _subsql = REPLACE(_subsql,'{_entregable}',_entregable);
+    SET _subsql = REPLACE(_subsql,'{_codsubtema}', _codsub );
+    
+    SELECT CONCAT(_sql, '   ,',_subsql,'\n') INTO _sql ;
+    
+END IF;
+UNTIL _escape END REPEAT;
+CLOSE _curtemas;
+SET _sql = REPLACE(_tmpsql,'{subquerys}', _sql );
+SET _sql = REPLACE(_sql,'{_proy}', _proy);
+SET _sql = REPLACE(_sql,'{_ver}' , _ver);
+SET _sql = REPLACE(_sql,'{_dpto}', _dpto);
+SET _sql = REPLACE(_sql,'{_prov}', _prov);
+SET _sql = REPLACE(_sql,'{_dist}', _dist);
+SET _sql = REPLACE(_sql,'{_case}', _case);
+SELECT _sql INTO @txtsql;
+PREPARE stmt FROM @txtsql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;  
+ 
+END $$
+
+DELIMITER ;
+
+/*
+// -------------------------------------------------->
+// AQ 2.0 [03-01-2014 11:15]
+// Lista el Plan Otros 
+// --------------------------------------------------<
+*/
+DROP PROCEDURE IF EXISTS `sp_lis_inf_entregable_otros`;
+
+DELIMITER $$
+
+CREATE PROCEDURE `sp_lis_inf_entregable_otros`(IN _proy VARCHAR(10), IN _ver INT, 
+  IN _anio INT, IN _entregable INT, IN _dpto CHAR(2), IN _prov CHAR(2), 
+  IN _dist CHAR(2), IN _case CHAR(2))
+    BEGIN
+    DECLARE _sql       LONGTEXT;
+    DECLARE _tmpsql    TEXT DEFAULT ' 
+    SELECT  ben.t11_cod_bene, 
+        ben.t11_dni, 
+        CONCAT(ben.t11_ape_pat, \' \' ,ben.t11_ape_mat, \', \', ben.t11_nom) AS nombres,
+        sex.descrip AS sexo, 
+        ben.t11_edad, 
+        niv.descrip AS nivel, 
+        sec.descrip AS sector, 
+        ben.t11_unid_prod_1 as t11_nro_up_a, 
+        ben.t11_nro_up_b, 
+        ben.t11_nom_prod, 
+        ben.t11_direccion, 
+        ben.t11_ciudad, 
+        ben.t11_telefono, 
+        ben.t11_celular, 
+        ben.t11_mail, 
+        ben.t11_act_princ, 
+        est.descrip AS estado
+    {subquerys}
+    FROM      t11_bco_bene ben
+    INNER JOIN t12_plan_otros plan ON (ben.t02_cod_proy = plan.t02_cod_proy AND plan.t02_version={_ver}) 
+    LEFT JOIN adm_tablas_aux sex ON (ben.t11_sexo = sex.codi) 
+    LEFT JOIN adm_tablas_aux niv ON (ben.t11_nivel_educ = niv.codi) 
+    LEFT JOIN adm_tablas_aux sec ON (ben.t11_sec_prod = sec.codi) 
+    LEFT JOIN adm_tablas_aux est ON (ben.t11_estado = est.codi) 
+    WHERE 
+          ben.t02_cod_proy = \'{_proy}\'
+      AND ben.t11_dpto     = (CASE WHEN \'{_dpto}\'=\'\' THEN ben.t11_dpto ELSE \'{_dpto}\' END )
+      AND ben.t11_prov     = (CASE WHEN \'{_prov}\'=\'\' THEN ben.t11_prov ELSE \'{_prov}\' END )
+      AND ben.t11_dist     = (CASE WHEN \'{_dist}\'=\'\' OR \'{_dist}\'=\'00\'  THEN ben.t11_dist ELSE \'{_dist}\' END )
+      AND IFNULL(ben.t11_case,\'\')     = (CASE WHEN \'{_case}\'=\'\' OR \'{_case}\'=\'00\' THEN IFNULL(ben.t11_case,\'\') ELSE \'{_case}\' END )
+      
+    GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
+    ORDER BY nombres ASC; ' ;
+    DECLARE _tmpsubsql TEXT DEFAULT '
+         (
+          SELECT CONCAT(cap.t15_avance,\'|\', IFNULL(cap.t15_valor,\'\'))
+            FROM t25_inf_entregable_otros cap
+           WHERE cap.t02_cod_proy = \'{_proy}\'
+             AND CONCAT(cap.t08_cod_comp,\'.\',cap.t09_cod_act,\'.\',cap.t09_cod_sub) = \'{_codsub}\'
+             AND cap.t25_anio = {_anio}
+             AND cap.t25_entregable = {_entregable}
+             AND cap.t02_version = {_ver}
+             AND cap.t11_cod_bene = ben.t11_cod_bene
+          ) AS \'{_codsubtema}\'' ;
+          
+    DECLARE _subsql TEXT;
+    DECLARE _contador  INT;
+    DECLARE _codfte   INT;
+    DECLARE _nomfte   VARCHAR(50);
+    DECLARE _codFE    INT DEFAULT 10;
+    DECLARE _escape INT DEFAULT 0;
+    DECLARE _codsub CHAR(10);
+    DECLARE _codtema INT;
+    DECLARE _nomtema VARCHAR(150);
+    DECLARE _nroentregado DOUBLE ;
+    DECLARE _curtemas CURSOR 
+                     FOR 
+                SELECT  CONCAT(plan.t08_cod_comp,'.',plan.t09_cod_act,'.',plan.t09_cod_sub) AS subact,
+                    sub.t09_cod_sub,
+                    sub.t09_sub,
+                    plan.t12_nro_ent
+                FROM t12_plan_otros plan
+                INNER JOIN t09_subact sub ON (sub.t02_cod_proy=plan.t02_cod_proy AND sub.t02_version=plan.t02_version AND sub.t08_cod_comp=plan.t08_cod_comp AND sub.t09_cod_act=plan.t09_cod_act AND sub.t09_cod_sub=plan.t09_cod_sub)
+                WHERE plan.t02_cod_proy = _proy
+                  AND plan.t02_version  = _ver
+                  AND plan.t12_tipo > 0
+                ORDER BY t12_tipo, subact;
+                  
+    DECLARE CONTINUE HANDLER FOR SQLSTATE '02000' SET _escape = 1;
+    SET _sql = '' ;
+    OPEN _curtemas;
+    REPEAT
+    FETCH _curtemas INTO _codsub , _codtema , _nomtema , _nroentregado ;
+    IF NOT _escape THEN
+        SET _subsql = REPLACE(_tmpsubsql,'{_proy}',_proy);
+        SET _subsql = REPLACE(_subsql,'{_ver}',_ver);
+        SET _subsql = REPLACE(_subsql,'{_codsub}',_codsub);
+        -- SET _subsql = REPLACE(_subsql,'{_codtema}',_codtema);
+        SET _subsql = REPLACE(_subsql,'{_anio}',_anio);
+        SET _subsql = REPLACE(_subsql,'{_entregable}',_entregable);
+        SET _subsql = REPLACE(_subsql,'{_codsubtema}', _codsub );
+        
+        SELECT CONCAT(_sql, '   ,',_subsql,'\n') INTO _sql ;
+        
+    END IF;
+    UNTIL _escape END REPEAT;
+    CLOSE _curtemas;
+    SET _sql = REPLACE(_tmpsql,'{subquerys}', _sql );
+    SET _sql = REPLACE(_sql,'{_proy}', _proy);
+    SET _sql = REPLACE(_sql,'{_ver}' , _ver);
+    SET _sql = REPLACE(_sql,'{_dpto}', _dpto);
+    SET _sql = REPLACE(_sql,'{_prov}', _prov);
+    SET _sql = REPLACE(_sql,'{_dist}', _dist);
+    SET _sql = REPLACE(_sql,'{_case}', _case);
+    SELECT _sql INTO @txtsql;
+    PREPARE stmt FROM @txtsql;
+    EXECUTE stmt;
+    DEALLOCATE PREPARE stmt;  
+ 
+END $$
+
+DELIMITER ;

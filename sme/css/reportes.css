@@ -1,0 +1,398 @@
+body {
+	font: 100% Arial, Helvetica, sans-serif;
+	background: #FEFEFE;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	/* esto centra el contenedor en los navegadores IE 5*. El texto se ajusta posteriormente con el valor predeterminado de alineación a la izquierda en el selector #container */
+	color: #000000;
+	overflow: hidden;
+}
+
+.toolbar {
+	MARGIN-TOP: 1px;
+	WIDTH: 100%;
+}
+
+.toolbar .barra {
+	background-color: #066;
+	color: #999;
+}
+
+.toolbar IMG {
+	border: none;
+	cursor: pointer;
+}
+
+.BackContentReport {
+	background-color: #999;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	height: 520px;
+	overflow: scroll;
+}
+
+.ContentReport {
+	MARGIN-TOP: 1px;
+	width: 100%;
+	min-height: 550px;
+	border: 1 solid #666;
+	background-color: #FFF;
+	/* overflow:hidden; */
+}
+
+.BodyReport {
+	width: inherit;
+}
+
+.RowSelected {
+	border: 1px solid #000066;
+	background-color: #CCCCFF;
+	padding: 3px 4px 3px 4px;
+}
+
+.ClassField {
+	font-weight: bold;
+	color: #036;
+}
+
+.ClassText {
+	font-weight: normal;
+	color: #000;
+}
+
+.RowAlternate {
+	border: 1px solid #000066;
+	background-color: #CCCCFF;
+	padding: 3px 4px 3px 4px;
+}
+
+.RowSimple {
+	border: 1px solid #000066;
+	background-color: #CCCCFF;
+	padding: 3px 4px 3px 4px;
+}
+
+.Boton {
+	color: #666699;
+	font-size: 10px;
+	text-indent: -20;
+}
+
+.Subtitle {
+	border-bottom: 1px solid #666;
+	background-color: #eeeeee;
+	color: #036;
+	padding: 3px 4px 3px 4px;
+	font-size: 11px;
+}
+
+.Subtitle img {
+	border: none;
+}
+
+.TableGrid table {
+	font-family: arial, helvetica, _sans;
+	font-size: 12px;
+	border: 1px solid #525e94;
+}
+
+.TableGrid table caption {
+	font-family: arial, helvetica, _sans;
+	font-size: 12px;
+	color: #525e94;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+}
+
+.TableGrid table thead {
+	background-color: #EAEAEA;
+	font-weight: normal;
+	font-family: arial, helvetica, _sans;
+	font-size: 12px;
+	color: #575757;
+	text-decoration: none;
+}
+
+.TableGrid table thead td {
+	/* border:solid 1px #959595; */
+	border-bottom: 1px solid #333;
+	border-right: 1px solid #333;
+}
+
+.TableGrid table tbody.data td {
+	border-bottom: 1px solid #333;
+	border-right: 1px solid #333;
+	padding: 3px 4px 3px 4px;
+}
+
+.TableGrid table tbody.data tr.subtotal {
+	font-weight: bold;
+}
+
+.TableGrid table tbody.data td img {
+	border: none;
+	height: 15px;
+	width: 15px;
+}
+
+.TableGrid table tbody.data tr.RowData {
+	color: #000066;
+	font-size: 11px;
+}
+
+.TableGrid table tbody.data td a {
+	color: #4262C7;
+}
+
+.TableGrid table tfoot,.TableGrid table tfoot table,.TableGrid table tfoot tr td
+	{
+	background-color: #E8E8E8;
+	border: none;
+	text-align: center;
+	font-weight: bold;
+}
+
+.TableGrid table tfoot tr td {
+	padding: 3px 4px;
+}
+
+.TableGrid table tfoot .total {
+	text-align: right;
+}
+
+.TableGrid table tfoot tr td a span.noImg {
+	visibility: hidden;
+	font-size: 1px;
+	line-height: 16px;
+}
+
+.TableGrid table tfoot tr td a {
+	text-decoration: none;
+	display: block;
+	height: 12px;
+	width: 15px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: top center;
+	outline-style: none;
+}
+
+.ContentReport .Head,.TableGrid .Head {
+	font-size: 16px;
+	color: #036;
+	text-align: center;
+	font-weight: bold;
+}
+
+.TableEditReg table {
+	padding: 20px;
+	background-color: #FFF;
+}
+
+.TableEditReg fieldset {
+	padding: 3px;
+}
+
+.TableEditReg legend {
+	font-size: 10px;
+	color: #036;
+	font-weight: bold
+}
+
+.TableEditReg Button {
+	color: #CC9;
+	border-left: 10px solid #dfd5c0;
+	border-right: 10px solid #dfd5c0;
+}
+
+.TableEditReg INPUT {
+	background-color: #FFF;
+	border: #CCF solid 1px;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableEditReg INPUT:focus {
+	background-color: #FFC;
+	border: #CCF solid 1px;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableEditReg INPUT.Centrado {
+	text-align: center;
+}
+
+.TableEditReg INPUT.Derecha {
+	text-align: right;
+}
+
+.TableEditReg TEXTAREA {
+	background-color: #FFF;
+	border: #CCF solid 1px;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+
+.TableEditReg TEXTAREA:focus {
+	background-color: #FFC;
+	border: #CCF solid 1px;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+
+.TableEditReg SELECT {
+	background-color: #FFF;
+	border: #CCF solid 1px;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableEditReg SELECT OPTION {
+	width: inherit;
+	text-align: justify;
+}
+
+.TableEditReg SELECT:focus {
+	background-color: #FFC;
+	border: #CCF solid 1px;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableEditReg td {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFF;
+}
+
+.Button BUTTON {
+	font-family: Helvetica, sans-serif, Arial;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #EEE;
+	border: solid 1px #999;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 11px;
+	color: #000;
+}
+
+.Button BUTTON:hover {
+	color: #999;
+}
+
+.right{
+	text-align: right;
+}
+.left{
+	text-align: left;
+}
+.center{
+	text-align: center;
+	vertical-align: middle;
+}
+.b{
+	font-weight: bold;
+}
+.cab{
+	background-color: #ccffcc;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+}
+.tblhead{
+	border: solid 1px #CCC; 
+	background-color: #eeeeee;
+}
+
+.tblDesembolsos thead tr{
+	background: #E9E9E9 !important;
+}
+.tblDesembolsos thead tr th{
+	border: 1px solid #999999;
+	padding: 3px 4px;
+}
+
+
+
+.cp-mes{
+    min-width: 30px;
+    text-align: center;
+    border: solid 1px #CCC;
+}
+.cronprog table{
+	text-align: center;
+	 width: 500px;
+	 padding: 0;
+	 margin: 0;
+	 border-collapse: collapse;
+}
+.cronprog table thead tr{
+     background-color: #DDD;
+     font-weight: bold;
+}
+.row-producto{
+     background-color: #BDDFFF;
+}
+.row-indicador, .row-indicador td{
+     background-color: #CFDFFF;
+}
+.row-indicador-impar{
+     background-color: #C5D5F5;
+}
+.row-indicador-par{
+     background-color: #CFDFFF;
+}
+.row-crct, .row-crct td{
+    background-color: #EDEFFF;
+}
+.row-crct-impar{
+    background-color: #E5E5F5;
+}
+.row-crct-par{
+    background-color: #EDEFFF;
+}
+.cronprog table tr td{
+	border: solid 1px #CCC;
+	min-width: 30px;
+	margin: 0;
+}
+.row-anio-impar{
+    background-color: #CCC;
+}
+.row-anio-par{
+    background-color: #DDD;
+}
+
+.col-um{
+	width: 60px;
+    min-width: 20px;
+    max-width: 60px;
+    text-align: center;
+}
+.col-meta{
+	width: 20px;
+    min-width: 10px;
+    max-width: 50px;
+    text-align: center;
+}
+.bold{
+	font-weight: bold;
+}
+.row-entregable{
+    background-color: #FFEE99;
+}
+.rpt-head{
+	padding: 4px;
+	font-weight: bold;
+	text-align: center;	
+}

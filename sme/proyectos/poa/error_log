@@ -1,0 +1,18 @@
+[07-Dec-2011 12:02:18] PHP Parse error:  syntax error, unexpected ',' in /home/monelao/public_html/FE3/sme/proyectos/poa/poa_fin_gastos_adm.php on line 153
+[08-Dec-2011 23:58:13] PHP Parse error:  syntax error, unexpected ')' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 68
+[09-Dec-2011 19:07:59] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 236
+[09-Dec-2011 20:21:47] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 238
+[13-Dec-2011 00:47:52] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ';' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 249
+[13-Dec-2011 00:48:54] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ';' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 249
+[13-Dec-2011 00:50:54] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ';' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 249
+[13-Dec-2011 00:52:20] PHP Parse error:  syntax error, unexpected T_VAR, expecting ';' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 249
+[13-Dec-2011 01:07:34] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 72
+[17-Dec-2011 17:02:20] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/poa/poa_tec_sub_act_metas.php on line 220
+[17-Dec-2011 18:02:41] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting ']' in /home/monelao/public_html/FE3/sme/proyectos/poa/poa_fin_personal_edit.php on line 213
+[17-Dec-2011 19:12:04] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/poa/poa_fin_personal_edit.php on line 569
+[18-Dec-2011 12:45:51] PHP Parse error:  syntax error, unexpected '*' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_gast_func_edit.php on line 131
+[18-Dec-2011 12:46:55] PHP Parse error:  syntax error, unexpected '*' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_gast_func_edit.php on line 131
+[19-Dec-2011 20:52:43] PHP Parse error:  syntax error, unexpected ',' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 249
+[17-Feb-2012 07:20:20] PHP Parse error:  syntax error, unexpected '>' in /home/monelao/public_html/FE3/sme/proyectos/poa/mp_linea_base.php on line 231
+[24-Feb-2012 06:52:32] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/poa/poa_fin_edit.php on line 407
+[15-Apr-2012 21:35:30] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/poa/poa_tec_process.php on line 311

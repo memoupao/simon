@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsUpdate" value="name:t01_id_inst;datatype:int,name:t01_id_cto;datatype:int,name:t01_dni_cto;datatype:string,name:t01_ape_pat;datatype:string,name:t01_ape_mat;datatype:string,name:t01_nom_cto;datatype:string,name:t01_fono_ofi;datatype:string,name:t01_mail_cto;datatype:string,name:t01_cel_cto;datatype:string,name:t01_cgo_cto;datatype:string,name:usr_crea;datatype:string,name:fch_crea;datatype:datetime,name:usr_actu;datatype:string,name:fch_actu;datatype:datetime,name:est_audi;datatype:string" />
+	<infoitem key="UD_Recordset1" value="name:t01_id_inst;datatype:int,name:t01_id_cto;datatype:int,name:t01_dni_cto;datatype:string,name:t01_ape_pat;datatype:string,name:t01_ape_mat;datatype:string,name:t01_nom_cto;datatype:string,name:t01_fono_ofi;datatype:string,name:t01_mail_cto;datatype:string,name:t01_cel_cto;datatype:string,name:t01_cgo_cto;datatype:string,name:usr_crea;datatype:string,name:fch_crea;datatype:datetime,name:usr_actu;datatype:string,name:fch_actu;datatype:datetime,name:est_audi;datatype:string" />
+</info>

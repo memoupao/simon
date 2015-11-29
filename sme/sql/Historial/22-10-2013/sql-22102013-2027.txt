@@ -1,0 +1,9 @@
+/* Cambio de longitud y comentarios*/
+alter table `sgp`.`t00_tasa` change `t00_nom_abre` `t00_nom_abre` varchar(50) character set latin1 collate latin1_swedish_ci NOT NULL comment 'Nombre de Tasa', change `t00_nom_lar` `t00_nom_lar` varchar(20) character set latin1 collate latin1_swedish_ci NOT NULL comment 'Valor de Tasa';
+
+/* actualizacion en los tipos de caracteres*/
+alter table `sgp`.`t00_tasa` change `t00_nom_abre` `t00_nom_abre` varchar(50) character set utf8 NOT NULL comment 'Nombre de Tasa', change `t00_nom_lar` `t00_nom_lar` varchar(20) character set utf8 NOT NULL comment 'Valor de Tasa', change `usr_crea` `usr_crea` varchar(20) character set utf8 NULL , change `usr_actu` `usr_actu` varchar(20) character set utf8 NULL , change `est_audi` `est_audi` char(1) character set utf8 NULL ;
+
+
+
+

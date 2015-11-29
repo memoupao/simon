@@ -1,0 +1,79 @@
+trx1 : BEGIN
+DECLARE _rowcount INT ;
+declare _idtema INT;
+DECLARE _nrotemas DOUBLE ;
+DECLARE _nrohoras DOUBLE ;
+DECLARE _nrobenef DOUBLE ;
+select count(1) into _rowcount 
+  from t12_plan_capac_tema
+ WHERE t02_cod_proy = _proy 
+   AND	t02_version = _ver 
+   AND	t08_cod_comp= _comp
+   AND	t09_cod_act = _act 
+   AND	t09_cod_sub = _sub  
+   AND  t12_tem_espe=_nomtema;
+if _rowcount > 0 then
+    SELECT 0 AS numrows, 0 AS codigo, 'Ya existe un registro con el mismo Nombre' as msg ;  
+    leave trx1 ;
+end if ;
+SELECT ifnull(max(t12_cod_tema),0)+1 INTO _idtema
+  FROM t12_plan_capac_tema
+ WHERE t02_cod_proy = _proy 
+   AND	t02_version = _ver 
+   AND	t08_cod_comp= _comp
+   AND	t09_cod_act = _act 
+   AND	t09_cod_sub = _sub ;
+   insert into t12_plan_capac_tema 
+	(t02_cod_proy, 
+	t02_version, 
+	t08_cod_comp, 
+	t09_cod_act, 
+	t09_cod_sub, 
+	t12_cod_tema, 
+	t12_tem_espe, 
+	t12_nro_hora, 
+	t12_nro_bene, 
+	fch_crea, 
+	usr_crea, 
+	est_audi
+	)
+	values
+	( _proy ,
+          _ver ,
+	  _comp,
+	  _act ,
+	  _sub  ,
+	  _idtema,
+	  _nomtema, 
+	  _horas, 
+	  _benef, 
+	  now(), 
+	 _usr, 
+	 '1'
+	);
+    
+  SELECT ROW_COUNT() INTO _rowcount ;
+   COMMIT ;
+   
+   SELECT COUNT(t12_cod_tema),  SUM(t12_nro_hora), SUM(t12_nro_bene)
+     INTO  _nrotemas, _nrohoras, _nrobenef 
+     FROM t12_plan_capac_tema   
+    WHERE t02_cod_proy = _proy 
+      AND t02_version = _ver 
+      AND t08_cod_comp= _comp
+      AND t09_cod_act = _act 
+      AND t09_cod_sub = _sub ;
+    UPDATE t12_plan_capac 
+	SET t12_nro_tema = _nrotemas , 
+	    t12_hor_cap  = _nrohoras , 
+	    t12_nro_ben  = _nrobenef ,
+	    usr_actu     = _usr , 
+	    fch_actu     = NOW()
+	 WHERE t02_cod_proy = _proy 
+	   AND	t02_version = _ver 
+	   AND	t08_cod_comp= _comp
+	   AND	t09_cod_act = _act 
+	   AND	t09_cod_sub = _sub  ;
+/* Retornar el numero de registros afectados */
+SELECT _rowcount AS numrows, _idtema AS codigo, '' as msg ;  
+END

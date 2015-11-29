@@ -1,0 +1,112 @@
+.iframePopupDialog {
+	position: absolute;
+	z-index: 1010;
+	filter: alpha(opacity : 0.1);
+	-moz-opacity: 0.1;
+	-khtml-opacity: 0.1;
+}
+
+.popupBox {
+	background-color: buttonface;
+	font-family: Tahoma, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 2px;
+	border: 2px outset #CCCCCC;
+	width: 50em;
+	height: 35em;
+	text-align: left;
+	/*popup dialog cross-browser shadow*/
+	box-shadow: 7px 7px 8px #818181;
+	-webkit-box-shadow: 7px 7px 8px #818181;
+	-moz-box-shadow: 7px 7px 8px #818181;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#818181',
+		Direction=135, Strength=8);
+}
+
+.popupContent {
+	overflow: auto;
+	vertical-align: top;
+	width: auto;
+	height: 32em;
+}
+
+.popupContainer {
+	width: 100%;
+}
+
+.shieldPopupDialog {
+	background-color: #CCC;
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+.popupBar {
+	border: 2px outset buttonface;
+	padding: 0.4em;
+	background-color: #666;
+	color: #FFF;
+	width: auto;
+}
+
+.popupTitle {
+	text-align: left;
+	float: left;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.popupClose {
+	border: 2px solid #FFF !important;
+	background-color: #000 !important;
+	text-decoration: none !important;
+	color: #FFF !important;
+	padding-left: 0.4em !important;
+	padding-right: 0.4em !important;
+	font-weight: bold !important;
+}
+
+.popupClose:hover {
+	border: 2px solid #000 !important;
+	background-color: #FFF !important;
+	text-decoration: none !important;
+	color: #000 !important;
+	padding-left: 0.4em !important;
+	padding-right: 0.4em !important;
+	font-weight: bold !important;
+}
+
+.PopupDialog2 .popupBox {
+	color: #FFF;
+	font-weight: bold;
+	padding: 2px;
+	border: 0px;
+	width: 768px;
+	height: 480px;
+	background-color: transparent;
+	/* background-color:red; */
+	box-shadow: 7px 7px 8px #818181;
+	-webkit-box-shadow: 7px 7px 8px #818181;
+	-moz-box-shadow: 7px 7px 8px #818181;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#818181',
+		Direction=135, Strength=8);
+}
+
+.PopupDialog2 .popupBar {
+	border: 2px outset buttonface;
+	padding: 0.4em;
+	background-color: #666;
+	color: #FFF;
+	width: auto;
+}
+
+.PopupDialog2 .popupContent {
+	overflow: auto;
+	vertical-align: top;
+	width: auto;
+	min-height: inherit;
+	height: 447px;
+}
+
+#spryPopupDialog1 .popupContent {
+	border: 1px inset buttonface;
+}

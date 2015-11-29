@@ -1,0 +1,225 @@
+<?php
+require_once("BLBase.class.php");
+/// -------------------------------------------------------------------------
+/// Programmer Name : Aima R. Christian			   Created Date  : 2010-07-01
+/// Comments		: Clase Manejadora de Reportes
+///					  Visor de Reportes
+/// -------------------------------------------------------------------------
+class BLReportes extends BLBase 
+{
+var $fecha ;
+var $Session ;
+var $Error ;
+var $title="";
+var $linkPage = "";
+var $params = "";
+var $filter = "";
+//-----------------------------------------------------------------------------
+function __construct()
+	{	
+		$this->fecha = date("Y-m-d H:i:s", time());
+		$this->Session = $_SESSION['ObjSession'];
+		$this->SetConexionID($this->Session->GetConection()->Conexion_ID);
+		$this->GetParams();
+	}
+function SetConexionID($ConexID)
+{ 	$this->SetConection($ConexID) ; }
+function Dispose()
+{ 	$this->Destroy() ; }
+//-----------------------------------------------------------------------------
+#Visor de Reportes
+/// <summary>
+///  Prepara los Parametros para la generacion del Reporte.
+/// </summary>
+function GetParams()
+{
+	try
+	{	
+		error_reporting(0);  $ret = "?";
+		foreach ($_GET as $key => $value) 
+		{  $KeyValue=$key."=".$value."&" ;		
+		   $ret = str_replace($KeyValue, "", $ret);
+		   if($key!='link' && $key != 'title' && $key!='filter') 
+		   { $ret .= $key."=".$value."&" ;	}
+		} 
+		if($ret!=""){ $ret = substr($ret,0,strlen($ret)-1); }
+	}
+	catch(Exception $ex)
+	{	$ret = "";	}
+	
+	$querystring = implode("&",$_GET);
+	
+	$idReport = $_GET['ReportID'];
+	
+	if($idReport=='')
+	{
+		$this->title = $_GET['title'];
+		if($this->title=="" || $this->title == NULL){$this->title="Sin Título";}
+		$this->linkPage = $_GET['link'];
+		$this->params = str_replace("?","", $ret);
+		$this->filter = $_GET['filter'];
+	}
+	else
+	{
+		$rowRPT = $this->SeleccionarReporte($idReport);
+		$this->linkPage = $rowRPT['url_rpt'];
+		$this->title = $rowRPT['tit_rpt'];
+		$this->filter = $rowRPT['url_param'];
+		$this->params = str_replace("?","", $ret);
+	}
+	
+	return true;
+}
+
+
+/// <summary>
+///  Genera script para la visualizacion del reporte
+/// </summary>
+function ViewReport()
+{
+/* Invocamos al metodo LoadReport para Cargar el Reporte*/
+$script  = '<script language="javascript">';
+$script .= 'LoadReport("'.$this->linkPage.'", "'.$this->params.'");';
+$script .= '</script>';
+echo($script);
+return true;
+}
+private function ExportExcel()
+{
+	return true;
+}
+private function ExportWord()
+{ 
+	return true;
+}
+function Export($to)
+{
+	if($to=='word') {return ExportWord(); }
+}
+function ListadoExport		()
+{
+  $sql = "SELECT 1 as codigo, 'Excel'  as descripcion
+		  UNION
+		  SELECT 2 as codigo, 'Word'  as descripcion
+		  UNION
+		  SELECT 3 as codigo, 'PDF'  as descripcion
+		  UNION
+		  SELECT 4 as codigo, 'HTML'  as descripcion; " ;
+
+  return $this->Execute($sql);
+}
+#End Visor
+
+
+
+
+#Region CRUD Reportes
+function ListadoCategoriaReportes()
+{
+return $this->ExecuteProcedureReader("sp_sel_reportes_categorias", NULL);
+}
+
+function ListadoReportes($Categoria=0)
+{
+$SP = "sp_sel_reportes";
+$params = array($Categoria);
+$ret = $this->ExecuteProcedureReader($SP, $params);
+return $ret;
+}
+function SeleccionarReporte($id)
+{
+$SP = "sp_get_reporte";
+$params = array($id);
+$ret = $this->ExecuteProcedureReader($SP, $params);
+$row = mysqli_fetch_assoc($ret);
+$ret->free();
+return $row;
+}
+#EndRegion
+
+
+#Region Reportes Varios
+function RepMatrizMonitoreo()
+{
+$SP = "sp_rpt_matriz_monitoreo";
+//$params = array();
+$ret = $this->ExecuteProcedureReader($SP, NULL);
+return $ret;
+}
+function Benchmark01()
+{
+ $SP = "sp_rpt_benchmark";
+$params = NULL;
+$ret = $this->ExecuteProcedureReader($SP, $params);
+return $ret;
+}
+
+function RepInstituciones()
+{
+$SP = "sp_rpt_instituciones";
+//$params = array();
+$ret = $this->ExecuteProcedureReader($SP, NULL);
+return $ret;
+}
+
+function ListaNroProy_TiposInst()
+{
+$SP = "sp_sel_tip_inst_proy";
+$ret = $this->ExecuteProcedureReader($SP, NULL);
+return $ret;
+}
+
+function ListaNroProy_SecInst()
+{
+$SP = "sp_sel_sec_inst_proy2";
+$ret = $this->ExecuteProcedureReader($SP, NULL);
+return $ret;
+}
+
+function ListaMontoProy_TiposInst()
+{
+$SP = "sp_sel_montotip_inst_proy";
+$ret = $this->ExecuteProcedureReader($SP, NULL);
+return $ret;
+}
+
+
+function ListaAportesProy_TiposInst()
+{
+$SP = "sp_sel_aporte_proy";
+$ret = $this->ExecuteProcedureReader($SP, NULL);
+return $ret;
+}
+
+function ListaTip_Inst()
+{
+$SP = "sp_sel_tip_inst";
+$ret = $this->ExecuteProcedureReader($SP, NULL);
+return $ret;
+}
+
+
+
+function RepFichaProy($idProy, $idVersion)
+{
+$SP = "sp_rpt_ficha_proyecto";
+$params = array($idProy, $idVersion);
+$ret = $this->ExecuteProcedureReader($SP, $params);
+$row = mysqli_fetch_assoc($ret);
+$ret->free();
+return $row;
+}
+
+function RepFichaProy_Fuentes($idProy, $idVersion)
+{
+$SP = "sp_rpt_ficha_proyecto_fuentes";
+$params = array($idProy, $idVersion);
+$ret = $this->ExecuteProcedureReader($SP, $params);
+return $ret;
+}
+#End Reportes Varios
+
+//fin de la Clase BLReportes
+} 
+
+?>

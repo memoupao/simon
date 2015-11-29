@@ -1,0 +1,55 @@
+#!/bin/bash
+MY_USER="root"
+MY_PASSWORD="teclado"
+MY_BD_PROD="pg"
+MY_BD_TEST="pg-test"
+MY_APP_PROD="pg"
+MY_APP_TEST="test"
+MY_HOME="/u/www/html"
+
+############################################
+## Functions
+############################################
+function bkapp {
+    local app=$1-$(date +%d%m%y).tar
+    tar -cvf $app $1
+    mv $app backup/
+}
+
+function bkbd {
+    local name=bckp-$1-$(date +%d%m%y)
+    mysqldump --opt --password=$MY_PASSWORD --user=$MY_USER $1 --routines --triggers > $name.sql
+    tar -zcvf $name.tgz $name.sql
+    rm $name.sql
+}
+
+############################################
+## Options
+############################################
+case $1 in
+
+"backupall")
+    cd $MY_HOME
+    bkapp $MY_APP_PROD
+    bkapp $MY_APP_TEST
+    
+    cd $MY_HOME/backup
+    bkbd $MY_BD_PROD
+    bkbd $MY_BD_TEST;;
+
+"backup")
+    cd $MY_HOME
+    bkapp $MY_APP_PROD
+    
+    cd $MY_HOME/backup
+    bkbd $MY_BD_PROD;;
+"upd_all_bd_test")
+    cd $MY_HOME/backup
+    mysqldump --opt --password=$MY_PASSWORD --user=$MY_USER $MY_BD_PROD --routines --triggers > tmp.sql
+    sed -i.bak -e s/\\/${MY_APP_PROD}\\//\\/${MY_APP_TEST}\\//g tmp.sql
+    mysql -u $MY_USER -p$MY_PASSWORD -e "DROP DATABASE IF EXISTS ${MY_BD_TEST}; CREATE DATABASE ${MY_BD_TEST} DEFAULT CHARACTER SET utf8;"
+    mysql --password=$MY_PASSWORD --user=$MY_USER $MY_BD_TEST < tmp.sql;;
+"qst")
+    mysql -u $MY_USER -p$MY_PASSWORD $MY_BD_TEST -e "source sql/${2};";;
+*)                      echo "Others";;
+esac

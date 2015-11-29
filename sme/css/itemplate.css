@@ -1,0 +1,717 @@
+body {
+	font: 100% "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #FEFEFE;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000;
+}
+
+.oneColElsCtrHdr #container {
+	width: 800px;
+	background: #FFF;
+	margin: 0 auto;
+	border: 1px solid #000;
+	text-align: left;
+}
+
+.oneColElsCtrHdr #header {
+	background: #DDD;
+	background-image: url(../img/topFE.jpg);
+	background-repeat: no-repeat;
+	padding: 0 10px 0 20px;
+	height: 115px;
+}
+
+.oneColElsCtrHdr #header h1 {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.oneColElsCtrHdr #mainContent {
+	background: #FFF;
+	width: inherit;
+	min-height: 353px;
+	height: 100%;
+	font-size: 11.5px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.oneColElsCtrHdr #footer {
+	padding: 0 10px;
+	background: #DDD;
+	font-size: 11px;
+}
+
+.oneColElsCtrHdr #footer p {
+	text-align: center;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.oneColElsCtrHdr #footer a {
+	text-decoration: underline;
+	color: #444;
+}
+
+.oneColElsCtrHdr #footer a:hover {
+	text-decoration: underline;
+	color: #069;
+}
+
+#LayerTutulo {
+	position: absolute;
+	left: 576px;
+	top: 197px;
+	height: 33px;
+	z-index: 1;
+	font-size: 18px;
+	color: #036;
+	font-weight: bold;
+}
+
+#LayerSession {
+	position: relative;
+	width: 220px;
+	height: 81px;
+}
+
+#LayerSession td {
+	font-size: 12px;
+	text-align: left;
+	color: #666;
+}
+
+#LayerSession A {
+	font-size: 12px;
+	text-align: center;
+	color: #036;
+	text-decoration: underline;
+}
+
+#banner {
+	MARGIN-TOP: 1px;
+	WIDTH: 800px;
+	HEIGHT: 110px;
+}
+
+#slider {
+	OVERFLOW: hidden;
+	WIDTH: 800px;
+	POSITION: relative;
+	HEIGHT: 110px;
+}
+
+#slider img {
+	OVERFLOW: hidden;
+	WIDTH: 800px;
+	HEIGHT: 110px;
+}
+
+#slider #sliderContent {
+	MARGIN-LEFT: 0;
+	WIDTH: 800x;
+	POSITION: absolute;
+	TOP: 0;
+}
+
+#slider .sliderImage {
+	DISPLAY: none;
+	FLOAT: left;
+	POSITION: relative;
+}
+
+#slider .sliderImage SPAN {
+	PADDING-RIGHT: 13px;
+	DISPLAY: none;
+	PADDING-LEFT: 13px;
+	FILTER: alpha(opacity = 70);
+	PADDING-BOTTOM: 10px;
+	WIDTH: 800px;
+	COLOR: #FFF;
+	PADDING-TOP: 5px;
+	POSITION: absolute;
+	BACKGROUND-COLOR: #000;
+	moz-opacity: .7;
+	khtml-opacity: .7;
+	opacity: .7;
+	height: 12px;
+}
+
+#slider .clear {
+	CLEAR: both;
+}
+
+#slider .sliderImage SPAN STRONG {
+	FONT-SIZE: 13px;
+}
+
+#slider .top {
+	LEFT: 0;
+	TOP: 0;
+}
+
+#slider .bottom {
+	LEFT: 0;
+	BOTTOM: 0;
+}
+
+#slider .left {
+	LEFT: 0;
+	WIDTH: 110px !important;
+	TOP: 0;
+	HEIGHT: 100px;
+}
+
+#slider .right {
+	RIGHT: 0;
+	WIDTH: 90px !important;
+	BOTTOM: 0;
+	HEIGHT: 100px;
+}
+
+#slider UL {
+	PADDING-RIGHT: 0;
+	PADDING-LEFT: 0;
+	PADDING-BOTTOM: 0;
+	MARGIN: 0;
+	PADDING-TOP: 0;
+	LIST-STYLE-TYPE: none;
+}
+
+#slider UL LI {
+	PADDING-RIGHT: 0;
+	PADDING-LEFT: 0;
+	PADDING-BOTTOM: 0;
+	MARGIN: 0;
+	PADDING-TOP: 0;
+}
+
+#slider .sliderImage H6 {
+	FONT-WEIGHT: regular;
+	FONT-SIZE: 16px;
+	MARGIN: 0;
+	FONT-FAMILY: "tahoma";
+}
+
+#slider .sliderImage IMG {
+	BORDER-TOP-WIDTH: 0;
+	BORDER-LEFT-WIDTH: 0;
+	BORDER-BOTTOM-WIDTH: 0;
+	BORDER-RIGHT-WIDTH: 0;
+}
+
+.RowSelected {
+	border: 1px solid #CCEFCB;
+	background-color: #CCF;
+	padding: 3px 4px 3px 4px;
+}
+
+.RowAlternate {
+	border: 1px solid #999;
+	background-color: #F8F8F8;
+	padding: 3px 4px 3px 4px;
+}
+
+.Boton {
+	color: #669;
+	font-size: 10px;
+	text-indent: -20;
+}
+
+.Subtitle {
+	border-bottom: 1px solid #666;
+	background-color: #eee;
+	color: #036;
+	padding: 3px 4px 3px 4px;
+	font-size: 11px;
+}
+
+.Subtitle img {
+	border: none;
+}
+
+.Subtitle span.title {
+	color: #036;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.SubtitleTable {
+	border: 1px solid #006;
+	background-color: #DDE4EC;
+	padding: 3px 4px 3px 4px;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.AccesosDirecto {
+	position: absolute;
+	text-align: right;
+	left: 720px;
+	top: 180px;
+	z-index: 1;
+}
+
+.AccesosDirecto img {
+	border: none;
+}
+
+.AccesosDirecto img.Size {
+	width: 32px;
+	height: 32px;
+}
+
+.AccesosDirecto img.Separator {
+	width: 1px;
+	height: 32px;
+}
+
+.AccesosDirecto span {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #036;
+	text-align: center;
+}
+
+.TableEditReg table {
+	padding: 20px;
+	background-color: #FFF;
+}
+
+.TableEditReg Button {
+	color: #CC9;
+	border-left: 10px solid #dfd5c0;
+	border-right: 10px solid #dfd5c0;
+}
+
+.TableEditReg INPUT {
+	background-color: #FFF;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableEditReg INPUT:focus {
+	background-color: #FFC;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableEditReg INPUT.Centrado {
+	text-align: center;
+}
+
+.TableEditReg INPUT.Derecha {
+	text-align: right;
+}
+
+.TableEditReg TEXTAREA {
+	background-color: #FFF;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+
+.TableEditReg TEXTAREA:focus {
+	background-color: #FFC;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+
+.TableEditReg SELECT {
+	background-color: #FFF;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableEditReg SELECT OPTION {
+	width: inherit;
+	text-align: justify;
+}
+
+.TableEditReg SELECT:focus {
+	background-color: #FFC;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableEditReg td {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFF;
+}
+
+.TextDescripcion {
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #003;
+	font-weight: normal;
+}
+
+.Iframe {
+	scrooling: no;
+	width: 100%;
+	overflow: hidden;
+}
+
+.caption {
+	background: url('../img/caption.bg.gif') repeat-x bottom;
+	height: 26px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #303030;
+	margin: 0;
+}
+
+.caption p {
+	background: url('../img/caption.left.gif') no-repeat left;
+	padding: 6px 0 0 10px;
+	height: 20px;
+	color: #303030;
+	margin: 0;
+}
+
+.caption a {
+	color: #303030;
+	text-decoration: none;
+}
+
+.caption a:hover {
+	text-decoration: underline;
+}
+
+.caption h3 {
+	background: url('../img/caption.right.gif') no-repeat right;
+	float: right;
+	margin: 0;
+	font-size: 10px;
+	height: 20px;
+	padding: 6px 6px 0 0;
+}
+
+.caption h2 {
+	background: url('../img/caption.right.gif') no-repeat right;
+	float: right;
+	margin: 0;
+	font-size: 10px;
+	height: 20px;
+	padding: 0;
+}
+
+.contentbox {
+	border-left: 1px solid #e8e8e8;
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 8px;
+	font-size: 11px;
+}
+
+.contentbox a {
+	color: #303030;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.contentbox a:hover {
+	text-decoration: underline;
+}
+
+.contenttext {
+	margin: 0;
+	padding: 2px 0 3px 0;
+	font-weight: bold;
+}
+
+.contentbottom {
+	background: url('contentbottom.bg.gif') repeat-x bottom;
+	height: 7px;
+	margin: 0;
+}
+
+.contentbottom p {
+	margin: 0;
+}
+
+.contentbottom span {
+	float: right;
+}
+
+.content {
+	margin: 0 16px 0 10px;
+}
+
+.content ul {
+	margin: 0;
+	padding: 0;
+}
+
+.content li {
+	list-style-type: none;
+	margin: 0 0 0 3px;
+	background: url('blt.gif') no-repeat;
+	padding: 0 0 4px 20px;
+}
+
+.TableGrid {
+	padding: 2px;
+}
+
+.TableGrid table {
+	font-family: arial, helvetica, _sans;
+	font-size: 11px;
+	border: 1px solid #CCC;
+	border-collapse: collapse;
+}
+
+.TableGrid thead td,.TableGrid thead th {
+	position: relative;
+}
+
+.TableGrid thead tr {
+	background: url('../img/caption.bg.gif') repeat-x bottom;
+	*position: relative;
+	_position: absolute;
+	*top: expression(this.offsetParent.scrollTop-2);
+}
+
+.TableGrid table caption {
+	font-family: arial, helvetica, _sans;
+	font-size: 12px;
+	color: #525e94;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.TableGrid thead th:hover {
+	color: #036;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.TableGrid table tbody.data td {
+	border: 1px solid #999;
+	padding: 3px 4px 3px 4px;
+}
+
+.TableGrid table tbody.data tr.RowData {
+	color: #000;
+	font-size: 11px;
+}
+
+.TableGrid table tbody.data tr.RowData:hover {
+	background-color: #FAFFD2;
+	color: #002448;
+}
+
+.TableGrid table tbody tr:hover {
+	border: 1px solid #333;
+	padding: 3px 4px 3px 4px;
+}
+
+.TableGrid table tbody.data td a {
+	color: #4262C7;
+}
+
+.TableGrid table tbody.data INPUT {
+	background-color: #FFF;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableGrid table tbody.data td INPUT:focus {
+	background-color: #FFC;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableGrid table tbody.data td TEXTAREA {
+	background-color: #FFF;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+
+.TableGrid table tbody.data td TEXTAREA:focus {
+	background-color: #FFC;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+
+.TableGrid table tbody.data td SELECT {
+	background-color: #FFF;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableGrid table tbody.data td SELECT:focus {
+	background-color: #FFC;
+	border: #CCF solid 1px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.TableGrid table tfoot,.TableGrid table tfoot table,.TableGrid table tfoot tr td
+	{
+	background-color: #666;
+	border: none;
+	text-align: center;
+}
+
+.TableGrid table tfoot tr td a span.noImg {
+	visibility: hidden;
+	font-size: 1px;
+	line-height: 16px;
+}
+
+.TableGrid table tfoot tr td a {
+	text-decoration: none;
+	display: block;
+	height: 12px;
+	width: 15px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: top center;
+	outline-style: none;
+}
+
+#toolbar {
+	font-size: 11px;
+	padding: 4px;
+	padding-bottom: 20px;
+	color: #000;
+	font-weight: bold;
+	background-color: #FFF;
+	min-height: 7px;
+}
+
+#toolbar.BackColor {
+	background-color: #EAEAEA;
+	min-height: 7px;
+	border-bottom: solid 1px #919191;
+}
+
+#toolbar.Subtitle {
+	font-size: 13px;
+	font-weight: bold;
+	border-bottom: solid 1px #919191;
+}
+
+#toolbar span.Button {
+	padding: 2px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #EEE;
+	border: solid 1px #999;
+	cursor: pointer;
+}
+
+#toolbar button.Button {
+	font-family: Helvetica, sans-serif, Arial;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #EEE;
+	border: solid 1px #999;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+#toolbar button.Button:hover {
+	color: #999;
+}
+
+#toolbar SELECT {
+	font-family: Helvetica, sans-serif, Arial;
+	border: solid 1px #999;
+	font-size: 11px;
+}
+
+#toolbar INPUT {
+	font-family: Helvetica, sans-serif, Arial;
+	border: solid 1px #999;
+	font-size: 10px;
+}
+
+#Institucion input {
+	font-family: Helvetica, sans-serif, Arial;
+	border: solid 1px #999;
+	font-size: 11px;
+	width: 98%;
+}
+
+#Institucion legend {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#Institucion input.Readonly {
+	background-color: #eee;
+}
+
+#Institucion input.Image {
+	width: 15px;
+	height: 16px;
+}
+
+.Button BUTTON {
+	font-family: Helvetica, sans-serif, Arial;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #EEE;
+	border: solid 1px #999;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 11px;
+	color: #000;
+}
+
+.Button BUTTON:hover {
+	color: #999;
+}
+
+.Button font {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #666;
+}
+
+.Button .ListItemsButton {
+	background-color: #FFF;
+	border: solid 1px #999;
+	cursor: pointer;
+	padding-left: 2px;
+	list-style-type: none;
+	z-index: 1;
+	position: absolute;
+	display: none;
+}
+
+.Button .ListItemsButton li: {
+	background-color: #CCC;
+}
+
+.Button .ListItemsButton li:hover {
+	background-color: #CCC;
+}

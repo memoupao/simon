@@ -1,0 +1,67 @@
+﻿<chart zeroPlaneAlpha="80" plotBorderColor="333333" legendCaption=""
+	zeroPlaneBorderColor="acbb99" plotFillAlpha="100" rotateValues="0"
+	overlapColumns="0" showCanvasBg="1" lineColor="0" chartLeftMargin="15"
+	lineAlpha="100" xAxisName="" anchorSides="10" anchorAlpha="100"
+	anchorBorderColor="767575" labelDisplay="WRAP" SYAxisMinValue=""
+	showDivLineSecondaryValues="1" SYAxisName="" showDivLineValues="1"
+	canvasBaseColor="acbb99" rotateLabels="0" divLineIsDashed="0"
+	setAdaptiveYMin="0" showSecondaryLimits="1" anchorBgAlpha="100"
+	PYAxisName="" placeValuesInside="0" SYAxisMaxValue=""
+	legendBorderAlpha="100" legendScrollBgColor="cccccc" PYAxisMaxValue=""
+	legendScrollBarColor="545454" plotSpacePercent="20" divLineThickness="1"
+	legendScrollBtnColor="545454" zeroPlaneShowBorder="1" showCanvasBase="1"
+	legendShadow="1" adjustDiv="1" chartBottomMargin="15" rotateYAxisName="1"
+	labelPadding="5" yAxisValuesStep="1" legendBgAlpha="100" valuePadding="5"
+	yAxisValuesPadding="5" showLegend="1" drawAnchors="1" slantLabels="0"
+	maxColWidth="100" setAdaptiveSYMin="0" legendAllowDrag="0"
+	canvasBgDepth="0" numDivLines="4" plotBorderAlpha="95"
+	xAxisNamePadding="0" chartTopMargin="15" lineThickness="2"
+	canvasBgColor="ffffff" labelStep="1" legendPosition="BOTTOM"
+	canvasBgAlpha="100" legendBorderThickness="1" showValues="1" showSum="0"
+	divLineColor="717170" divLineAlpha="40" captionPadding="10"
+	staggerLines="2" showShadow="0" anchorBorderThickness="1" lineDashed="0"
+	legendMarkerCircle="0" anchorRadius="3" canvasBaseDepth="0" showLabels="1"
+	legendPadding="15" legendBgColor="ffffff" anchorBgColor="ffffff"
+	showYAxisValues="1" PYAxisMinValue="" chartRightMargin="15"
+	legendBorderColor="545454" yAxisNamePadding="0" showLimits="1"
+	showPlotBorder="1" zeroPlaneColor="717170" yAxisValueDecimals="2"
+	numberSuffix="" sNumberScaleValue="1000,1000" aboutMenuItemLabel=""
+	showBorder="0" outCnvBaseFontColor="49563a" seriesNameInTooltip="1"
+	sNumberScaleUnit="K,M" baseFontColor="49563a" subCaption=""
+	defaultAnimation="1" forceDecimals="0" bgSWF="" decimalSeparator="."
+	logoPosition="TL" bgAlpha="100" bgColor="FFFFFF" inThousandSeparator=","
+	sFormatNumberScale="1" formatNumber="1" logoScale="100" clickURL=""
+	bgSWFAlpha="100" showToolTip="1" sDecimals="2" logoLink=""
+	aboutMenuItemLink="" sYAxisValueDecimals="0" outCnvBaseFontSize="10"
+	sNumberSuffix="" sNumberPrefix="" outCnvBaseFont="Verdana" animation="1"
+	numberPrefix="" sDefaultNumberScale="" logoAlpha="100" caption=""
+	toolTipBgColor="ffffff" toolTipSepChar=", " baseFont="Verdana"
+	baseFontSize="10" showExportDataMenuItem="0" toolTipBorderColor="49563a"
+	showAboutMenuItem="1" decimals="2" formatNumberScale="1"
+	defaultNumberScale="" numberScaleUnit="K,M" numberScaleValue="1000,1000"
+	exportEnabled="0" logoURL="" thousandSeparator="," sFormatNumber="1"
+	exportHandler="fc_exp_">
+	<categories>
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+		<category label="undefined" />
+	</categories>
+</chart>

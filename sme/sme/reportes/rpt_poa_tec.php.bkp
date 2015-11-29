@@ -1,0 +1,642 @@
+<?php include("../../includes/constantes.inc.php"); ?>
+<?php include("../../includes/validauser.inc.php"); ?>
+<?php
+
+require_once (constant("PATH_CLASS") . "BLReportes.class.php");
+require_once (constant("PATH_CLASS") . "BLMarcoLogico.class.php");
+require_once (constant("PATH_CLASS") . "BLPOA.class.php");
+require_once (constant("PATH_CLASS") . "BLProyecto.class.php");
+
+$idProy = $objFunc->__Request('idProy');
+$idAnio = $objFunc->__Request('idAnio') ? $objFunc->__Request('idAnio') : $objFunc->__Request('anio');
+$idVersion = $objFunc->__Request('idVersion') ? $objFunc->__Request('idVersion') : $idAnio + 1;
+
+$objML = new BLMarcoLogico();
+$ML = $objML->GetML($idProy, $idVersion);
+
+$objRep = new BLReportes();
+
+$row = $objRep->RepFichaProy($idProy, $idVersion);
+
+$objPOA = new BLPOA();
+$rowInfPoa = $objPOA->POA_Seleccionar($idProy, $idAnio);
+
+$objProy = new BLProyecto();
+$rsSector = $objProy->SectoresProductivos_Listado($idProy);
+
+?>
+
+<?php if($objFunc->__QueryString()=="") { ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/tempReports.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type"
+	content="text/html; charset=charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Plan Operativo</title>
+<!-- InstanceEndEditable -->
+<script language="javascript" type="text/javascript"
+	src="../../jquery.ui-1.5.2/jquery-1.2.6.js"></script>
+<link href="../../css/reportes.css" rel="stylesheet" type="text/css"
+	media="all" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<form id="frmMain" name="frmMain" method="post" action="#">
+<?php } ?>
+<div id="divBodyAjax" class="TableGrid">
+			<!-- InstanceBeginEditable name="BodyAjax" -->
+
+
+			<table width="700" cellpadding="0" cellspacing="0">
+
+
+				<tbody class="data" bgcolor="#FFFFFF">
+
+					<tr>
+						<td width="24%" height="25" align="left" valign="middle"
+							nowrap="nowrap" bgcolor="#E8E8E8"><strong>POA Correspondiente al
+								año</strong></td>
+						<td colspan="2" align="left" valign="middle"><strong>Año <?php echo($idAnio);?></strong>&nbsp;</td>
+						<td colspan="2" align="left" valign="middle" bgcolor="#E8E8E8"><strong>Código
+								del Proyecto</strong></td>
+						<td width="34%" align="left" valign="middle"><strong><?php echo($row['t02_cod_proy']);?></strong></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td height="32" align="left" valign="middle" bgcolor="#E8E8E8"><strong>Periodo
+								Referencia</strong></td>
+						<td colspan="5" align="left" valign="middle"><strong><?php echo($rowInfPoa['t02_periodo']);?></strong></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td height="32" align="left" valign="middle" bgcolor="#E8E8E8"><strong>Fecha
+								de Presentación</strong></td>
+
+						<td colspan="5" align="left" valign="middle"><strong>
+        <?php echo (date("d-m-Y",strtotime($rowInfPoa['fch_crea'])));?>
+		 </strong></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td height="32" align="left" valign="middle" bgcolor="#FFFFAA"><strong>Supervisor
+								del Proyecto</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo($row['jefe_proy']);?></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#FFFFAA"><strong>Monitor
+								Temático</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo($row['moni_tema']);?></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#FFFFAA"><strong>Monitor
+								Financiero</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo($row['moni_fina']);?></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#FFFFAA"><strong>Monitor
+								Externo</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo($row['moni_exte']);?></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td height="32" align="left" valign="middle" bgcolor="#E8E8E8"><strong>Título
+								del Proyecto</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo(nl2br($row['t02_nom_proy']));?></td>
+					</tr>
+    <?php while($rsS = mysqli_fetch_assoc($rsSector))  { ?>
+     <tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#E8E8E8"><strong>Sector
+								Productivo</strong></td>
+						<td colspan="2" align="left" valign="middle"><?php echo($rsS['sector']);?></td>
+						<td colspan="2" align="left" valign="middle" bgcolor="#E8E8E8"><strong>Subsector</strong></td>
+						<td align="left" valign="middle"><?php echo($rsS['subsector']);?></td>
+					</tr>
+       <?php }?>
+
+      <?php
+    
+    $rsAmbito = $objProy->AmbitoGeo_Listado($idProy, $idVersion);
+    $rowspan = mysqli_num_rows($rsAmbito);
+    ?>
+    <tr style="font-size: 11px;">
+						<td rowspan="<?php echo($rowspan+2);?>" align="left"
+							valign="middle" bgcolor="#E8E8E8"><strong>Ubicación</strong></td>
+						<td colspan="5" align="center" valign="middle"
+							style="display: none;">&nbsp;</td>
+					</tr>
+
+					<tr style="font-size: 11px;">
+						<td width="24%" height="23" align="center" valign="middle"
+							bgcolor="#E8E8E8"><strong>Departamento</strong></td>
+						<td colspan="3" align="center" valign="middle" bgcolor="#E8E8E8"><strong>Provincia</strong></td>
+						<td colspan="3" align="center" valign="middle" bgcolor="#E8E8E8"><strong>Distrito</strong></td>
+					</tr>
+        <?php while($r = mysqli_fetch_assoc($rsAmbito))  { ?>
+        <tr style="font-size: 11px;">
+						<td height="25" align="center" valign="middle" nowrap="nowrap"><?php echo( $r['dpto']);?></td>
+						<td colspan="3" align="center" valign="middle" nowrap="nowrap"><?php echo( $r['prov']);?></td>
+						<td colspan="3" align="center" valign="middle" nowrap="nowrap"><?php echo( $r['dist']);?></td>
+					</tr>
+    	<?php
+        }
+        $rsAmbito->free();
+        ?>
+
+     <tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#E8E8E8"><strong>Propósito
+								del Proyecto</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo(nl2br($row['t02_pro']));?></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#E8E8E8"><strong>Institución
+								Ejecutora</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo(nl2br($row['t01_nom_inst']));?></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#E8E8E8"><strong>Instituciones
+								Colaboradoras</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo($row['inst_colabora']);?></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#E8E8E8"><strong>Población
+								Beneficiaria</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo(nl2br($row['t02_ben_obj']));?></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#E8E8E8"><strong>Fecha
+								real de Inicio del proyecto</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo ($row['t02_fch_ini']);?></td>
+					</tr>
+					<tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#E8E8E8"><strong>Fecha
+								programada para el término del proyecto</strong></td>
+						<td colspan="5" align="left" valign="middle"><?php echo ($row['t02_fch_ter']);?></td>
+					</tr>
+					<tr bgcolor="#E8E8E8" style="font-size: 11px;">
+						<td align="left" valign="middle"><strong>Resumir datos de
+								programacion presupuestal</strong></td>
+						<td colspan="3" align="left" valign="middle"><div align="center">
+								<strong>Total programado S/.</strong>
+							</div></td>
+						<td width="19%" align="left" valign="middle"><div align="center">
+								<strong>Total ejecutado S/.</strong>
+							</div></td>
+						<td align="left" valign="middle"><div align="center">
+								<strong>Porcentaje de avance (%)</strong>
+							</div></td>
+					</tr>
+
+    <?php
+    $totPro = 0;
+    $totEje = 0;
+    $aPoaPresupArr = array();
+    $rsPres = $objRep->Rep_POA_Presupuesto($idProy, $idAnio);
+    while ($aRow = mysqli_fetch_assoc($rsPres)) {
+        $aPoaPresupArr[$aRow['t41_fte_finan']] = $aRow['total'];
+        $totEje += $aRow['total'];
+    }
+    $rsPres->free();
+    
+    $rsFuentes = $objRep->RepFichaProy_Fuentes($idProy, $idVersion);
+    $aTotEje = 0;
+    $aTotPor = 0;
+    while ($rfte = mysqli_fetch_assoc($rsFuentes)) {
+        $aPor = $aPoaPresupArr[$rfte['t01_id_inst']] * 100 / $rfte['monto'];
+        $totPro += $rfte['monto'];
+        $aTotEje += $aPoaPresupArr[$rfte['t01_id_inst']];
+        ?>
+    <tr style="font-size: 11px;">
+						<td align="left" valign="middle" bgcolor="#E8E8E8"><?php echo $rfte['t01_sig_inst']; ?></td>
+						<td colspan="3" align="left" valign="middle">
+							<div style="width: 120px; text-align: right;"><?php echo number_format($rfte['monto'],2); ?></div>
+						</td>
+						<td>
+							<div style="width: 90px; text-align: right;"><?php echo number_format($aPoaPresupArr[$rfte['t01_id_inst']], 2); ?></div>
+						</td>
+						<td>
+							<div style="width: 130px; text-align: right;">
+      		<?php echo number_format($aPor, 2)." %"; ?>
+      	</div>
+						</td>
+					</tr>
+	<?php
+    }
+    $rsFuentes->free();
+    ?>
+  </tbody>
+
+				<tfoot>
+					<tr>
+						<td align="left" valign="middle">TOTAL DEL PROYECTO</td>
+						<td colspan="3" align="left" valign="middle"><?php echo(number_format($totPro,2));?></td>
+
+      <?php $porcentaje = ($aTotEje * 100) / $totPro ;?>
+      <td><?php echo(number_format($aTotEje,2));?></td>
+						<td><?php echo(number_format($porcentaje,2)." %");?></td>
+					</tr>
+				</tfoot>
+			</table>
+			<br />
+
+
+			<p>
+    <?php
+    $objRep = new BLPOA();
+    $row = $objRep->POA_Seleccionar($idProy, $idAnio);
+    
+    ?>
+
+ </p>
+
+			<center>
+				<fieldset style="width: 700px; min-height: 60px; display: block;">
+					<legend style="font-size: 11px; text-align: justify;">Observaciones
+						de Monitoreo Técnico</legend>
+					<div style="text-align: justify; color: #F00; font-size: 11px;">
+      <?php echo(nl2br($row['t02_obs_cmt']));?>
+      <br />
+					</div>
+				</fieldset>
+			</center>
+			<br />
+			<table width="800" border="0" align="center" cellpadding="0"
+				cellspacing="1" class="TableGrid">
+				<tr bgcolor="#CCCCFF">
+					<td align="left" valign="middle"><strong style="color: blue;">1.
+							PUNTOS ATENCION</strong></td>
+				</tr>
+				<tr>
+					<td align="left"
+						style="color: #009; font-size: 11px; text-align: justify;">
+						Referirse a los aspectos más importantes que se debe tomar en
+						cuenta, antes de iniciar la ejecución del periodo programado.
+						Hacer alusión a posibles reprogramaciones debido al cambio de la
+						situación prevista en el momento de diseño del proyecto.
+						Considerar los factores externos que hayan variado respecto a la
+						etapa de diseño. De haber actividades que deban ejecutarse
+						antes de la fecha prevista, indicar por qué se requiere adelantar
+						la ejecución.</td>
+				</tr>
+				<tr>
+					<td align="left" style="font-size: 11px; text-align: justify;"><?php echo(nl2br($row["t02_punto_aten"]));?></td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle">&nbsp;</td>
+				</tr>
+				<tr bgcolor="#CCCCFF">
+					<td align="left" valign="middle"><strong style="color: blue;">2.
+							COYUNTURA ACTUAL</strong></td>
+				</tr>
+				<tr>
+					<td align="left" valign="middle">&nbsp;</td>
+				</tr>
+
+				<tr class="SubtitleTable"
+					style="border: solid 1px #CCC; background-color: #eeeeee;">
+					<td width="751" height="23" align="left" valign="middle"><strong>2.1.
+							Política Nacional y/o sectorial</strong></td>
+				</tr>
+
+
+				<tr>
+					<td align="left" style="color: #009; font-size: 11px;">Mencionar
+						los cambios o nuevos dispositivos legales que estén vinculados al
+						desarrollo del proyecto y que se hayan registrado entre la
+						culminación la etapa anterior y el inicio de la fase objetivo del
+						POA. Estos cambios stán referidos al ámbito nacional o al del
+						gobierno local.</td>
+				</tr>
+				<tr>
+					<td align="left" style="font-size: 11px; text-align: justify;"><?php echo(nl2br($row["t02_politica"]));?></td>
+				</tr>
+				<tr>
+					<td style="color: #009; font-size: 11px;">&nbsp;</td>
+				</tr>
+				<tr class="SubtitleTable"
+					style="border: solid 1px #CCC; background-color: #eeeeee;">
+					<td width="751" height="23" align="left" valign="middle"><strong>2.2.
+							Beneficiarios y principales partes implicadas</strong></td>
+				</tr>
+
+				<tr>
+					<td align="left" style="color: #009; font-size: 11px;">Referirse a
+						la población objetivo, a las organizaciones que las involucran y
+						a los directivos que participarían en cualquiera de las
+						actividades programadas, y, de existir barreras, como se plantea
+						en esta etapa la uperación de las mismas.</td>
+				</tr>
+				<tr>
+					<td align="left" style="font-size: 11px; text-align: justify;"><?php echo(nl2br($row["t02_benefic"]));?></td>
+				</tr>
+				<tr>
+					<td align="left" style="color: #009; font-size: 11px;">&nbsp;</td>
+				</tr>
+				<tr class="SubtitleTable"
+					style="border: solid 1px #CCC; background-color: #eeeeee;">
+					<td width="751" height="23" align="left" valign="middle"><strong>2.3.
+							Otras Intervenciones</strong></td>
+				</tr>
+
+				<tr>
+					<td align="left" style="color: #009; font-size: 11px;">Comentar si
+						en forma paralela al desarrollo del proyecto, se registran en la
+						zona de trabajo otras intervenciones convergentes con los
+						objetivos del proyecto.</td>
+				</tr>
+				<tr>
+					<td align="left" style="font-size: 11px; text-align: justify;"><?php echo(nl2br($row["t02_otras_interv"]));?></td>
+				</tr>
+			</table>
+			<table width="850" cellpadding="0" cellspacing="0">
+
+				<tr>
+					<td colspan="5" align="left" valign="middle">&nbsp;</td>
+				</tr>
+
+				<tr bgcolor="#CCCCFF">
+					<td colspan="5" align="left" valign="middle"><strong
+						style="color: blue;">3. COMPONENTES</strong></td>
+				</tr>
+
+				<tr>
+					<td colspan="5" align="left" valign="middle">&nbsp;</td>
+				</tr>
+				<tbody class="data" bgcolor="#FFFFFF">
+					<tr colspan="5" class="SubtitleTable"
+						style="border: solid 1px #CCC; background-color: #eeeeee;">
+						<td colspan="5" height="23" align="left" valign="middle"><strong>Metas
+								de Indicadores de Componente para el Año.</strong></td>
+					</tr>
+
+
+    <?php
+    $objPOA = new BLPOA();
+    $iRs = $objPOA->POA_ListadoIndicadoresComponente($idProy, $idVersion, $idAnio);
+    $RowIndex = 0;
+    if ($iRs->num_rows > 0) {
+        while ($row = mysqli_fetch_assoc($iRs)) {
+            $tipo = $row["tipo"];
+            ?>
+     <?php if($tipo=="componente") { ?>
+      <tr style="border: solid 1px #CCC; background-color: #eeeeee;">
+						<td height="15" colspan="5" align="left" valign="middle"><strong><?php echo($row['codigo'].".- ".nl2br($row['indicador']));?></strong></td>
+					</tr>
+					<tr style="border: solid 1px #CCC; background-color: #eeeeee;">
+						<td width="329" align="left" valign="middle"><strong>Indicador de
+								Componente</strong></td>
+						<td height="15" colspan="3" align="center" valign="middle"><strong>Valor</strong></td>
+						<td width="228" align="center" valign="middle"><strong>
+								Descripción</strong></td>
+					</tr>
+     <?php } else { ?>
+     <tr style="border: solid 1px #CCC; background-color: #eeeeee;">
+						<td width="329" rowspan="2" align="left" valign="middle"
+							bgcolor="#FFFFFF"><?php echo($row['codigo'].".- ".nl2br($row['indicador']));?>
+         <input name="t08_cod_comp_ind[]" type="hidden"
+							id="t08_cod_comp_ind[]" value="<?php echo($row['codigo']);?>"
+							class="componentes" /> <br /> <span><strong style="color: red;">Unidad
+									Medida</strong>: <?php echo( nl2br($row['um']));?></span> <br />
+							<span><strong style="color: red;">Meta Total</strong>: <?php echo($row['metatotal']);?></span>
+						</td>
+						<td width="83" height="16" align="center"><strong>Acumulado </strong></td>
+						<td width="79" align="center"><strong>Anual</strong></td>
+						<td width="79" align="center"><strong>Total</strong></td>
+						<td width="228" rowspan="2" align="left" valign="top"
+							bgcolor="#FFFFFF">
+        <?php echo(nl2br($row['descripcion']));?> </td>
+					</tr>
+					<tr>
+						<td align="center" nowrap="nowrap"><?php echo($row['ejecutado_acum']);?></td>
+						<td align="center" nowrap="nowrap"><?php echo($row['meta']);?></td>
+						<td align="center" nowrap="nowrap"><?php echo($row['ejecutado_acum'] + $row['meta']);?></td>
+					</tr>
+     <?php
+                
+$RowIndex ++;
+            }
+            ?>
+
+    <?php
+        }
+        $iRs->free();
+    }     // Fin de Indicadores de Componentes
+    else {
+        echo ("<b style='color:red'>" . nl2br("El Proyecto no cuenta con Indicadores de componentes para el Año ") . $idAnio . ", " . nl2br("o Aún no se ha generado la nueva Versión del Proyecto") . "...<br />Verificar el Marco Logico</b>");
+        exit();
+    }
+    
+    ?>
+    </tbody>
+				<tfoot>
+				</tfoot>
+			</table>
+			<div class="TableGrid">
+				<table width="850" cellpadding="0" cellspacing="0">
+					<tr>
+						<td colspan="12" align="left" valign="middle">&nbsp;</td>
+					</tr>
+					<tr bgcolor="#CCCCFF">
+						<td colspan="12" align="left" valign="middle"><strong
+							style="color: blue;">4. ACTIVIDADES</strong></td>
+					</tr>
+					<tr>
+						<td colspan="12" align="left" valign="middle">&nbsp;</td>
+					</tr>
+					<tr bgcolor="#CCCCFF">
+						<td colspan="12" align="left" valign="middle"><strong
+							style="color: blue;">5. SUBACTIVIDADES</strong></td>
+					</tr>
+					<tbody class="data" bgcolor="#FFFFFF">
+
+						<tr>
+							<td height="27" colspan="12" align="left" valign="middle"><strong>Planificacion
+									de Metas - SubActividades.</strong></td>
+						</tr>
+
+
+						<tr
+							style="border: solid 1px #CCC; background-color: #eeeeee; font-size: 10px; font-weight: bold;">
+							<td height="15" align="left" valign="middle">&nbsp;</td>
+							<td width="169" height="15" align="left" valign="middle">SubActividades</td>
+							<td width="51" height="15" align="center" valign="middle">Unidad
+								Mediada</td>
+							<td width="42" height="15" align="center" valign="middle">Meta
+								Fisica Inicial</td>
+							<td height="15" align="center" valign="middle">Meta Proyectada
+								del Año Anterior</td>
+							<td height="15" align="center" valign="middle">Meta Ejecutada
+								Año Anterior</td>
+							<td height="15" align="center" valign="middle">Meta Total por
+								Ejecutar</td>
+							<td height="15" align="center" valign="middle">Meta Total  del Año <?php echo($idAnio);?></td>
+							<td height="15" align="center" valign="middle">Meta Proyectada
+								Años Restantes</td>
+							<td height="15" align="center" valign="middle">Meta Reprogram</td>
+							<td height="15" align="center" valign="middle">Variac</td>
+							<td align="center" valign="middle">Observaciones MT</td>
+						</tr>
+		<?php
+$objML = new BLMarcoLogico();
+$rsComp = $objML->ListadoDefinicionOE($idProy, $idVersion);
+
+$rowsCO = mysql_num_rows($rsComp);
+
+while ($rowCO = mysql_fetch_assoc($rsComp)) {
+    
+    ?>
+
+      <tr style="background-color: #FFF;">
+							<td colspan="12" align="left" valign="middle"
+								style="background-color: #6CF;">
+								<div style="display: inline-block;">
+									<strong>Componente <?php
+    echo " " . $rowCO['t08_cod_comp'];
+    ?>:</strong>
+								</div>
+								<div style="display: inline-block;">
+		<?php
+    echo $rowCO['t08_comp_desc'];
+    ?>
+        </div>
+							</td>
+						</tr>
+
+
+    <?php
+    $objML = new BLMarcoLogico();
+    $objPOA = new BLPOA();
+    
+    $rs = $objML->ListadoActividadesOE($idProy, $idVersion, $rowCO['t08_cod_comp']);
+    $rows = mysql_num_rows($rs);
+    
+    while ($rowAct = mysql_fetch_assoc($rs)) {
+        
+        ?>
+
+   		    <tr style="border: solid 1px #CCC; background-color: #DAF3DD;">
+							<td width="28" align="left" valign="middle">
+              <?php echo($rowCO['t08_cod_comp'].".".$rowAct['t09_cod_act']);?></td>
+							<td height="15" colspan="11" align="left" valign="middle"><strong><?php echo($rowAct['t09_act']);?></strong></td>
+						</tr>
+			<?php
+        $iRs = $objPOA->POA_ListadoSubActividades($idProy, $idVersion, $rowCO['t08_cod_comp'], $rowAct['t09_cod_act'], $idAnio);
+        $RowIndex = 0;
+        
+        while ($row = mysqli_fetch_assoc($iRs)) {
+            
+            ?>
+                    <tr class="RowData"
+							<?php if($row['t09_obs_mt']!=''){echo("style='color:red;'");}?>>
+							<td width="28" align="left" valign="middle" bgcolor="#FFFFFF"><?php echo($row['codigo']);?></td>
+							<td align="left" valign="middle"><?php echo( $row['descripcion']);?></td>
+							<td align="center" valign="middle"><?php echo( $row['um']);?></td>
+							<td align="center" valign="middle" nowrap="nowrap"><?php echo(number_format($row['mfi']));?></td>
+							<td width="67" align="center" valign="middle"><?php echo(number_format($row['mpaa']));?></td>
+							<td width="62" align="center" valign="middle"><?php echo(number_format($row['meaa']));?></td>
+							<td width="51" align="center" valign="middle"><?php echo(number_format($row['mtpe']));?></td>
+							<td width="44" align="center" valign="middle" bgcolor="#F2F7B9">
+                          <?php echo(number_format($row['meta_poa']));?>
+                      </td>
+							<td width="77" align="center" valign="middle"><?php echo(number_format($row['mpar']));?></td>
+							<td width="63" align="center" valign="middle"><?php echo(number_format($row['mprog']));?></td>
+							<td width="41" align="center" valign="middle"><?php echo(number_format($row['mvar']));?></td>
+							<td width="153" align="left" valign="middle"><?php echo( $row['t09_obs_mt']);?></td>
+						</tr>
+	   <?php
+        }
+        $iRs->free();
+    }
+} /* cerrar componentes */
+?>
+  </tbody>
+					<tfoot>
+					</tfoot>
+				</table>
+			</div>
+
+			<table width="850">
+				<tr>
+					<td colspan="5" align="left" valign="middle">&nbsp;</td>
+				</tr>
+
+				<tr bgcolor="#CCCCFF">
+					<td colspan="5" align="left" valign="middle"><strong
+						style="color: blue;">5. ANEXOS</strong></td>
+				</tr>
+
+				<tr>
+					<td colspan="5" align="left" valign="middle"><table width="793"
+							border="0" cellpadding="0" cellspacing="0">
+
+							<tbody class="data" bgcolor="#FFFFFF">
+								<tr class="SubtitleTable"
+									style="border: solid 1px #CCC; background-color: #eeeeee;">
+									<td height="22" colspan="3" align="left" valign="middle"><strong>Archivos
+											Adjuntos al Plan Operativo - Especificación Técnica</strong></td>
+								</tr>
+								<tr>
+            <?php
+            $objPOA = new BLPOA();
+            $HC = new HardCode();
+            
+            $iRs = $objPOA->POA_ListaAnexos($idProy, $idAnio);
+            $RowIndex = 0;
+            $i = 1;
+            if ($iRs->num_rows > 0) {
+                while ($row = mysqli_fetch_assoc($iRs)) {
+                    ?>
+
+            <?php
+                    $urlFile = $row['t02_url_file'];
+                    $filename = $row['t02_nom_file'];
+                    $file_extension = strtolower(substr(strrchr($filename, "."), 1));
+                    $path = constant('APP_PATH') . $HC->FolderUploadPOA;
+                    $href = constant("DOCS_PATH") . "download.php?filename=" . $filename . "&fileurl=" . $urlFile . "&path=" . $path;
+                    if ($file_extension == 'gif' or $file_extension == 'jpg' or $file_extension == 'jpeg' or $file_extension == 'png' or $file_extension == 'bmp') {
+                        $file_vista = "<img src=../../sme/proyectos/informes/anx_trim/" . $urlFile . " />";
+                    } else {
+                        $file_vista = "<a href=" . $href . " title='Descargar Archivo' target='_blank'>" . $row['t02_nom_file'] . "</a>";
+                    }
+                    ?>
+            <td width="791" height="30" align="center" valign="top"> <?php echo ($file_vista); ?><br>
+              <?php echo(nl2br($row['t02_desc_file']));?>
+              </td>
+            <?php if (is_int(($RowIndex+1)/3)){ echo("</tr><tr>");}?>
+            <?php
+                    $RowIndex ++;
+                }
+                $iRs->free();
+            } // Fin de Anexos Fotograficos
+            ?>
+            
+							
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3" align="center" valign="middle">&nbsp; <iframe
+											id="ifrmUploadFile" name="ifrmUploadFile"
+											style="display: none;"></iframe></td>
+								</tr>
+							</tfoot>
+						</table></td>
+				</tr>
+				<tr>
+					<td colspan="5" align="left" valign="middle">&nbsp;</td>
+
+				</tr>
+				<tfoot>
+					<tr>
+						<td colspan="5" align="left" valign="middle">&nbsp;</td>
+					</tr>
+				</tfoot>
+			</table>
+
+
+			<!-- InstanceEndEditable -->
+		</div>
+<?php if($objFunc->__QueryString()=="") { ?>
+</form>
+</body>
+<!-- InstanceEnd -->
+</html>
+<?php } ?>

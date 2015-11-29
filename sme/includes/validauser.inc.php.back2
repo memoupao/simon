@@ -1,0 +1,40 @@
+<?php
+if (!isset($_SESSION)) {
+  session_start();
+}
+
+// *** Restrict Access To Page: Grant or deny access to this page
+
+
+
+require(constant('PATH_CLASS')."MySQLDB.class.php"); 
+require(constant('PATH_CLASS')."BLSession.class.php"); 
+require(constant('PATH_CLASS')."Functions.class.php"); 
+
+
+$con = new DB_mysql() ;
+$con->conectar(constant('DB_NAME'), constant('DB_HOST'), constant('DB_USER'), constant('DB_PWD'));
+$ObjSession = new BLSession($con->Conexion_ID) ;
+$_SESSION['ObjSession'] = $ObjSession ;
+$con = NULL;
+
+$objFunc = new Functions() ;
+
+if(!$ObjSession->Authorized())
+  {  
+  		echo("<font style='color:red; font-size:11px; font-weight:bold;'><br><br>". "Su Sesión ha Expirado ...  Vuelva a Iniciar Sesión"."</font>");
+		/*
+		echo("<br>".$_SERVER['HTTP_REFERER']);
+		echo("<br>".$_SERVER['PHP_SELF']);
+		print_r($_REQUEST);
+		*/
+		$urlIndex = constant('DOCS_PATH')."login.php?error=No ha iniciado Sesion&lasturl=".$_SERVER['PHP_SELF'] ;
+		$objFunc->Redirect($urlIndex);
+		exit();
+  }
+
+//$con->Destroy();
+//$_SESSION['programa'] = $ObjSession->CodPrograma ;
+$queryString = "";
+
+?>

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* SprySpotlightColumn.css */
+
+/* Copyright (c) 2007. Adobe Systems Incorporated. All rights reserved. */
+
+/* This is the selector for the main container of the Spotlight Column and Stacked Containers structure. 
+ *
+ * If you want to constrain the width of the Master/Detail structure, set a width on
+ * the Master/Detail container. By default, our structure expands horizontally to fill
+ * up available space.
+ */
+.SpotlightAndStacked {
+	font: 100% Verdana, Geneva, sans-serif;
+	margin: 2px;
+}
+
+/* This is the selector for the row element which houses all the Spotlight and Stacked containers
+ * classes. 
+*/
+.SpotlightAndStacked .SpotlightAndStackedRow {
+	border: 1px solid #808080;
+	background-color: #EFEFEF;
+	margin-bottom: 5px;
+}
+
+/* This is the selector for the container of the Spotlight column elements. By default 
+ * the Spotlight column occupy about 25% from the width of the 
+ * entire structure. 
+*/
+.SpotlightAndStacked .SpotlightContainer {
+	width: 25%;
+	float: left;
+}
+
+/* This is the selector for the Spotlight column element which holds the actual data for 
+ * a spotlight column.
+*/
+.SpotlightAndStacked .SpotlightColumn {
+	
+}
+
+/* This is the selector for the container of the Stacked container elements. By default 
+ * the Stacked container occupy about 75% from the width of the 
+ * entire structure. 
+*/
+.SpotlightAndStacked .StackedContainer {
+	width: 75%;
+	float: right;
+}
+
+/* This is the selector for the Stacked container elements which holds the actual data for 
+ * a stacked column.
+*/
+.SpotlightAndStacked .StackedColumn {
+	border: 1px solid #FFFFFF;
+}

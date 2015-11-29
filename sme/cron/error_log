@@ -1,0 +1,2 @@
+[13-Apr-2012 00:08:38] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/monelao/public_html/FE3/cron/adm_msg.php on line 17
+[13-Apr-2012 00:08:40] PHP Parse error:  syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting T_STRING or T_VARIABLE or T_NUM_STRING in /home/monelao/public_html/FE3/cron/adm_msg.php on line 17

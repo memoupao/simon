@@ -1,0 +1,22 @@
+[07-Dec-2011 19:28:06] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 195
+[07-Dec-2011 23:47:46] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 250
+[08-Dec-2011 09:24:17] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 100
+[08-Dec-2011 09:24:25] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 100
+[08-Dec-2011 09:24:38] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 100
+[08-Dec-2011 09:24:49] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 100
+[08-Dec-2011 09:24:59] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 100
+[08-Dec-2011 09:25:31] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 100
+[08-Dec-2011 09:26:27] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 101
+[08-Dec-2011 09:40:32] PHP Parse error:  syntax error, unexpected T_AS, expecting ';' in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 113
+[08-Dec-2011 16:36:02] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 677
+[08-Dec-2011 16:37:34] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 677
+[08-Dec-2011 17:08:27] PHP Parse error:  syntax error, unexpected T_ELSE in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_mes_edit.php on line 355
+[11-Dec-2011 15:28:21] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monint_edit.php on line 310
+[12-Dec-2011 21:39:44] PHP Parse error:  syntax error, unexpected $end in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_edit.php on line 679
+[11-Jan-2012 13:54:58] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_sub_act.php on line 85
+[11-Jan-2012 13:56:16] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_sub_act.php on line 85
+[11-Jan-2012 13:57:12] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_sub_act.php on line 85
+[11-Jan-2012 13:58:38] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_sub_act.php on line 86
+[11-Jan-2012 14:01:38] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_monext_sub_act.php on line 87
+[20-Mar-2012 23:41:46] PHP Parse error:  syntax error, unexpected T_ECHO in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_trim_plan_capac.php on line 225
+[20-Mar-2012 23:41:55] PHP Parse error:  syntax error, unexpected T_ECHO in /home/monelao/public_html/FE3/sme/proyectos/informes/inf_trim_plan_capac.php on line 225
